@@ -5,7 +5,7 @@ import urllib.parse
 from pathlib import Path
 from botpy import logger
 
-import db.xqtd
+from db import *
 
 '''
 ret_data = {
@@ -61,7 +61,7 @@ def get_gache_record(authkey, game_biz, type):
 
 
 def load_all_gache_record(authkey, game_biz):
-    for type in db.xqtd.gacha_type_list:
+    for type in gacha_type_list:
         file = Path(f'xqtd_{type}.json')
         if file.exists():
             ret = json.loads(file.read_text(encoding='utf8'))
@@ -70,7 +70,7 @@ def load_all_gache_record(authkey, game_biz):
         logger.info(f'type: {type} num: {len(ret)}')
         logger.debug(f'record: {ret}')
         if ret:
-            db.xqtd.insert(ret)
+            xqtd.insert(ret)
 
 
 def parse_web_url(url):
@@ -85,7 +85,7 @@ def parse_web_url(url):
 
 
 def gen_gacha_img(uid):
-    # rank_type, pool_type = db.xqtd.get_gacha_by_uid(uid)
+    # rank_type, pool_type = get_gacha_by_uid(uid)
     # source = pd.DataFrame({'品质': rank_type, '卡池': pool_type})
     # base = alt.Chart(source).encode(
     #     theta=alt.Theta("count(卡池):Q").stack(True),
@@ -117,15 +117,15 @@ def gen_gacha_img(uid):
 
 
 def gen_gacha_info(uid):
-    res = db.xqtd.get_gacha_by_uid(uid)
+    res = get_gacha_by_uid(uid)
     if not res:
         return '请先导入抽卡记录\n1. 回复"/help"查看获取抽卡链接教程.\n2. "/url 抽卡链接" 导入抽卡记录'
-    return '\n' + '\n'.join([gen_gacha_str(gacha_type, res) for gacha_type in db.xqtd.gacha_type_list])
+    return '\n' + '\n'.join([gen_gacha_str(gacha_type, res) for gacha_type in gacha_type_list])
 
 
 def gen_gacha_str(gacha_type, data_list):
     data_list = [data for data in data_list if data['gacha_type'] == gacha_type]
-    pool_name = db.xqtd.gacha_type_name(gacha_type)
+    pool_name = gacha_type_name(gacha_type)
     data_list.sort(key=lambda data: data['time'])
     stat, record = {}, []
     for index, data in enumerate(data_list):
@@ -160,8 +160,7 @@ def gen_bd_str(gacha_type, record, total):
         bd, bd_type = 50 - total, ''
     elif record:
         # 抽到过5x 并且是限定
-        is_limited = db.xqtd.is_limited(record[-1][1]['item_id'])
-        bd, bd_type = 90 - rem1, '小' if is_limited else '大'
+        bd, bd_type = 90 - rem1, '小' if is_limited(record[-1][1]['item_id']) else '大'
     else:
         bd, bd_type = 90 - rem1, '小'
     return f'已抽{total}次，还差 {bd} 抽触发{bd_type}保底\n'
