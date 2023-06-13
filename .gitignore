@@ -3,5 +3,3 @@ config.yaml
 venv/
 __pycache__/
 *.log
-test*
-*.db

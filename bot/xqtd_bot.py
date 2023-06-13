@@ -21,7 +21,7 @@ async def bind_user(api: BotAPI, message: Message, params: str = None):
 
 @Commands("gc")
 async def gacha_record(api: BotAPI, message: Message, params: str = None):
-    img, info = xqtd_gacha_info(message)
+    img, info = xqtd_gacha_info(message.author.id)
     await message.reply(content=f'<@{message.author.id}>{info}', file_image=img)
     return True
 
@@ -38,7 +38,7 @@ async def load_xqtd_url(api: BotAPI, message: DirectMessage, params: str = None)
     return True
 
 
-def xqtd_gacha_info(user_id):
+def xqtd_gacha_info(user_id: str):
     flag, xqtd_uid = user.get_uid(user_id, 'xqtd_uid')
     if not flag:
         return None, TEXT_BIND
