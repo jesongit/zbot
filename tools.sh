@@ -5,12 +5,17 @@ debug() {
 }
 
 start() {
-    nohup python bot.py >/dev/null 2>&1 &
-    echo "start zbot complete."
+    if ps -ef | grep python | grep bot.py > /dev/null
+    then
+        echo "zbot already start."
+    else
+        nohup python bot.py >/dev/null 2>&1 &
+        echo "start zbot complete."
+    fi
 }
 
 stop() {
-    ps -ef | grep bot.py | awk '{print $2}' | xargs kill -9
+    ps -ef | grep python | grep bot.py | awk '{print $2}' | xargs kill -9
     echo "stop zbot complete."
 }
 
