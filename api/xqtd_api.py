@@ -3,7 +3,6 @@ import time
 import requests
 import urllib.parse
 from pathlib import Path
-from botpy import logger
 
 from db import *
 
@@ -28,14 +27,15 @@ ret_data = {
         'region': 'prod_gf_cn', 'region_time_zone': 8}}
 '''
 
+GACHA_URL = 'https://api-takumi.mihoyo.com/common/gacha_record/api/getGachaLog'
+
 
 def page_gacha_record(authkey, type, page, end_id, game_biz):
     try:
-        url = 'https://api-takumi.mihoyo.com/common/gacha_record/api/getGachaLog'
         params = {'authkey_ver': 1, 'authkey': authkey,
                   'lang': 'zh-cn', 'size': 20, 'end_id': end_id,
                   'page': page, 'gacha_type': type, 'game_biz': game_biz}
-        req = requests.get(url, params=params)
+        req = requests.get(GACHA_URL, params=params)
         assert req.status_code == 200, f'请求错误 code: {req.status_code}'
         data = req.json()
         logger.debug(f'code: {req.status_code} text: {req.text}')
@@ -54,7 +54,7 @@ def get_gache_record(authkey, game_biz, type):
         flag, end_id, ret = page_gacha_record(authkey, type, page, end_id, game_biz)
         if not flag:
             return []
-        stop, page, res = len(ret) < 20, page + 1, res + ret
+        stop, page, res = len(ret) < 20 or check_gacha_id(end_id), page + 1, res + ret
         time.sleep(3)
     # Path(f'./xqtd_{type}.json').write_text(str(res).replace('\'', '"'), encoding='utf8')
     return res
@@ -70,14 +70,17 @@ def load_all_gache_record(authkey, game_biz):
         logger.info(f'type: {type} num: {len(ret)}')
         logger.debug(f'record: {ret}')
         if ret:
-            xqtd.insert(ret)
+            xqtd.insert_gacha(ret)
 
 
-def parse_web_url(url):
+def parse_web_url(url: str):
     try:
+        if not url.startswith(GACHA_URL):
+            return False, None, None
         # url = urllib.parse.unquote(url)
         url = urllib.parse.urlparse(url.replace('&amp;', '&'))
         params = urllib.parse.parse_qs(url.query)
+        logger.debug(f'url: {url} params: {params}')
         return True, params['authkey'][0], params['game_biz'][0]
     except Exception as e:
         logger.exception(e)
@@ -119,8 +122,9 @@ def gen_gacha_img(uid):
 def gen_gacha_info(uid):
     res = get_gacha_by_uid(uid)
     if not res:
+        return False, None
         return '请先导入抽卡记录\n1. 回复"/help"查看获取抽卡链接教程.\n2. "/url 抽卡链接" 导入抽卡记录'
-    return '\n' + '\n'.join([gen_gacha_str(gacha_type, res) for gacha_type in gacha_type_list])
+    return True, '\n' + '\n'.join([gen_gacha_str(gacha_type, res) for gacha_type in gacha_type_list])
 
 
 def gen_gacha_str(gacha_type, data_list):

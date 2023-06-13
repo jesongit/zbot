@@ -1,56 +1,22 @@
-import botpy
-
 from bot import *
 from utils import *
 
-
-@Commands("test")
-async def test(api: BotAPI, message: Message, params: str = None):
-    await message.reply(content=f'<@{message.author.id}>params: {params}')
-    return True
-
-
-bot_list = {
-    '537729935': xqtd_bot,
-}
-handle_list = [test]
-
 user_cd_dict = {}
+handle_list = {
+    'on_message_create': xqtd_bot.get_handles(),
+    'on_direct_message_create': direct_bot.get_handles(),
+}
 
 
-class ZBot(botpy.Client):
+def check_message(message):
+    # 私聊通过
+    if isinstance(message, DirectMessage):
+        return True
+    # 忽略测试频道消息
+    if message.channel_id == test_channel():
+        return False
 
-    async def on_message_create(self, message: Message):
-        logger.info(f'guild: {message.guild_id} '
-                    f'channel: {message.channel_id} '
-                    f'author: {message.author} '
-                    f'mentions: {message.mentions} '
-                    f'content: {message.content}')
-
-        if not check_cd(message.author.id):
-            message.reply(content='cd...')
-
-        handles = handle_list \
-            if message.channel_id not in bot_list \
-            else bot_list[message.channel_id].get_handles()
-        for handle in handles:
-            if await handle(api=self.api, message=message):
-                return
-
-    async def on_direct_message_create(self, message: DirectMessage):
-        logger.info(f'author: {message.author} '
-                    f'direct_message: {message.direct_message} '
-                    f'content: {message.content}')
-
-        if not check_cd(message.author.id):
-            message.reply(content='cd...')
-
-        for handle in direct_bot.get_handle():
-            if await handle(api=self.api, message=message):
-                return
-
-
-def check_cd(user_id):
+    user_id = message.author.id
     now = time.time()
     if user_cd_dict.get(user_id) is None:
         return True
@@ -59,6 +25,6 @@ def check_cd(user_id):
 
 
 if __name__ == '__main__':
-    intents = botpy.Intents.all()
-    client = ZBot(intents=intents, log_level=log_level())
+    intents = botpy.Intents(guild_messages=True, direct_message=True)
+    client = ZBot(check_message, handle_list, intents=intents, log_level=log_level())
     client.run(appid=appid(), token=token())
