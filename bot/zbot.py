@@ -18,7 +18,8 @@ class ZBot(botpy.Client):
                     f'mentions: {message.mentions} '
                     f'content: {message.content}')
 
-        assert self.check_message(message)
+        if not self.check_message(message):
+            return
         for handle in self.handle_list['on_message_create']:
             if await handle(api=self.api, message=message):
                 return
@@ -28,7 +29,8 @@ class ZBot(botpy.Client):
                     f'direct_message: {message.direct_message} '
                     f'content: {message.content}')
 
-        assert self.check_message(message)
+        if not self.check_message(message):
+            return
         for handle in self.handle_list['on_direct_message_create']:
             if await handle(api=self.api, message=message):
                 return
