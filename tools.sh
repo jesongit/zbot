@@ -16,6 +16,7 @@ start() {
 
 stop() {
     if ps -ef | grep python | grep bot.py > /dev/null
+    then
         ps -ef | grep python | grep bot.py | awk '{print $2}' | xargs kill -9
         echo "stop zbot complete."
     else
