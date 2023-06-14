@@ -13,6 +13,7 @@ TEXT_HELP = f'''
 /xhelp: 查看所有指令
 /xurl: 使用抽卡链接导入抽卡记录 导入后自动绑定uid
 /xgacha: 查看抽卡记录
+抽卡链接导入方法进入子频道”贴吧“查看
 '''
 
 IMG_URL_HELP = 'res/img/xqtd_help_url.png'
