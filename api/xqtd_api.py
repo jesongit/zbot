@@ -156,7 +156,8 @@ def gen_gacha_str(gacha_type, data_list):
 
 
 def gen_bd_str(gacha_type, record, total):
-    rem1, rem2 = total % 90, total % 180
+    remain = total if not record else total - record[-1][0]
+    rem1, rem2 = remain % 90, remain % 180
     if gacha_type == 1:
         # 常驻
         bd, bd_type = 90 - rem1, ''

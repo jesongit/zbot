@@ -26,10 +26,13 @@ gacha_type_list = [
 ]
 
 # 限时角色列表
-limited_role_list = [
+limited_list = [
     1102,   # 希儿
     1204,   # 景元
     1006,   # 银狼
+
+    23010,  # 拂晓之前
+    23007,  # 雨一直下
 ]
 
 
@@ -59,7 +62,7 @@ def get_gacha_by_uid(uid):
 
 
 def is_limited(item_id):
-    return item_id in limited_role_list
+    return item_id in limited_list
 
 
 def check_gacha_id(end_id):
