@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
 import yaml
 from pathlib import Path
 from pymysql import cursors

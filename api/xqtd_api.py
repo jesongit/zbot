@@ -61,6 +61,7 @@ def get_gache_record(authkey, game_biz, type):
 
 
 def load_all_gache_record(authkey, game_biz):
+    xqtd_uid = 0
     for type in gacha_type_list:
         file = Path(f'xqtd_{type}.json')
         if file.exists():
@@ -71,6 +72,8 @@ def load_all_gache_record(authkey, game_biz):
         logger.debug(f'record: {ret}')
         if ret:
             xqtd.insert_gacha(ret)
+            xqtd_uid = ret[0]['uid']
+    return int(xqtd_uid)
 
 
 def parse_web_url(url: str):

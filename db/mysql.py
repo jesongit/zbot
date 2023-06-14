@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
 from queue import Queue
 from botpy import logger
 from pymysql import connect
@@ -31,7 +33,7 @@ def query(sql, args=None):
     conn = pool.get()
     cursor = conn.cursor()
     try:
-        cursor.execute(sql, args)
+        cursor.execute(sql, args=args)
         res = cursor.fetchall()
         cursor.close()
         return res

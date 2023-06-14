@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
 from .mysql import *
 tab = 'gacha_xqtd'
 

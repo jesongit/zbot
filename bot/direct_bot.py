@@ -1,4 +1,5 @@
-from api import *
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
 from botpy import BotAPI
 from botpy.message import DirectMessage
 from botpy.ext.command_util import Commands

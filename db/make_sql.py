@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
 def parse_where(cond):
     if isinstance(cond, str):
         return cond

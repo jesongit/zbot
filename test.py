@@ -20,4 +20,7 @@ def start_bot():
 
 
 if __name__ == '__main__':
+    # s = '$([char]0x627e)$([char]0x4e0d)$([char]0x5230)$([char]0x65e5)$([char]0x5fd7)$([char]0x6587)'
+    # print(decode_powershell_str(s))
     start_bot()
+
