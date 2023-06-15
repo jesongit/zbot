@@ -22,14 +22,14 @@ div {
     padding: 0;
     width: 720px;
     height: 1280px;
-    /*background: rgb(192, 192, 192);*/
+    background: rgb(192, 192, 192);
 }
 
 .base_info {
     height: 43%;
 }
 .role_title {
-    height: 8%;
+    height: 4%;
     color: white;
     background: gray;
 }
@@ -72,9 +72,39 @@ div {
     font-size: 150%;
     line-height: 100%;
 }
-.role_skill {
+.role_rank_and_skill {
+    height: 12%;
+    color: white;
+    background: gray;
+}
+.role_rank_list {
+    float: left;
     background: yellow;
-    height: 8%;
+    margin: 0;
+    height: 100%;
+    width: 25%;
+}
+.role_skill_list {
+    background: yellow;
+    float: right;
+    margin: 0;
+    height: 100%;
+    width: 75%;
+}
+.role_ranks {
+    margin: 1%;
+    float: left;
+    width: 16.6%;
+    height: 30%;
+}
+/*.role_skill_list {*/
+/*    background: yellow;*/
+/*    height: 5.5%;*/
+/*}*/
+.role_skill_img {
+    background: white;
+}
+.role_skill_info {
 }
 .role_equip_list {
     margin: 0;
@@ -118,7 +148,6 @@ div {
 .equip_attr div {
     padding-top: 2%;
 }
-
 .lf_text{
     margin: 0 0 0 6%;
     width: 40%;
@@ -137,18 +166,38 @@ div {
     line-height: 100%;
     font-size: 120%;
 }
-.title {
+.equip_name {
     height: 60%;
     font-weight: bolder;
-    font-size: 130%;
+    font-size: 135%;
     line-height: 100%;
 }
 
+.title {
+    height: 40%;
+    line-height: 100%;
+    font-weight: bolder;
+    font-size: 200%;
+}
+
+
 .sub_title {
     font-weight: bold;
-    font-size: 120%;
+    font-size: 130%;
 }
 
 .context {
     font-size: 110%;
+}
+
+.center {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.square {
+    background: white;
+    background-size: 100% 100%;
+    width: 50px;
+    height: 50px;
 }
