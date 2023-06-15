@@ -1,0 +1,2015 @@
+{
+  "playerDetailInfo": {
+    "isDisplayAvatarList": true,
+    "uid": 113637275,
+    "friendCount": 18,
+    "worldLevel": 5,
+    "signature": "",
+    "nickname": "KOnL6oZ3b",
+    "birthday": 0,
+    "level": 60,
+    "headIconID": 202006,
+    "assistAvatar": {
+      "rank": 0,
+      "position": 0,
+      "avatarId": 1102,
+      "name": "希儿",
+      "vo_tag": "seele",
+      "desc": "地底反抗组织「地火」的骨干，别号「蝴蝶」。 性格率真直爽，内心隐藏着细腻敏锐的一面。",
+      "rarity": "CombatPowerAvatarRarityType5",
+      "damage_type": "Quantum",
+      "level": 70,
+      "equipment": {
+        "level": 70,
+        "id": 23001,
+        "promotion": 5,
+        "rank": 1,
+        "name": "于夜色中",
+        "desc": "少女露出一丝不易察觉的微笑。\\n<i>「为什么呢？」\\n「此时此刻此地，明明只有我一个人……」\\n「却感觉…很热闹呢。」</i>",
+        "basic_desc": "巡猎命途专属的光锥，光锥技能仅对该命途生效。",
+        "skill_name": "花与蝶",
+        "skill_desc": "使装备者的暴击率提高18%。当装备者在战斗中速度大于100时，每超过10点，普攻和战技造成的伤害提高6%，同时终结技的暴击伤害提高12%，该效果可叠加6层。",
+        "rarity": "CombatPowerLightconeRarity5",
+        "images": {
+          "icon": "/assets/lightcones/23001_icon.webp",
+          "art": "/assets/lightcones/23001_art.webp",
+          "medium_icon": "/assets/lightcones/23001_mediumIcon.webp"
+        }
+      },
+      "promotion": 5,
+      "relics": [
+        {
+          "id": 61081,
+          "name": "天才的超距遥感",
+          "desc": "基于超距遥感技术制造出的通讯目镜，打破了传播介质与距离的束缚。",
+          "type": 1,
+          "type_name": "HEAD",
+          "max_level": 15,
+          "level": 15,
+          "main_affix_id": 1,
+          "main_affix_name": "生命值",
+          "main_affix_tag": "HPDelta",
+          "main_affix_value": 705.6000000101048,
+          "sub_affix_id": [
+            {
+              "id": 6,
+              "name": "防御力",
+              "tag": "DefenceAddedRatio",
+              "value": 0.09719999972730875,
+              "cnt": 2,
+              "step": 2,
+              "weight": 0.0
+            },
+            {
+              "id": 7,
+              "name": "速度",
+              "tag": "SpeedDelta",
+              "value": 5.200000001117587,
+              "cnt": 2,
+              "step": 4,
+              "weight": 0.75
+            },
+            {
+              "id": 8,
+              "name": "暴击率",
+              "tag": "CriticalChanceBase",
+              "value": 0.09396000229753554,
+              "cnt": 3,
+              "step": 5,
+              "weight": 1.0
+            },
+            {
+              "id": 9,
+              "name": "暴击伤害",
+              "tag": "CriticalDamageBase",
+              "value": 0.10368000157177448,
+              "cnt": 2,
+              "step": 0,
+              "weight": 1.0
+            }
+          ],
+          "relic_set_id": 108,
+          "image": "/assets/relic/61081.webp",
+          "score": 26.138709677419357
+        },
+        {
+          "id": 61082,
+          "name": "天才的频变捕手",
+          "desc": "装有精密的频变捕捉器的手套，能够对客观的声光振动进行直观地操作。",
+          "type": 2,
+          "type_name": "HAND",
+          "max_level": 15,
+          "level": 15,
+          "main_affix_id": 1,
+          "main_affix_name": "攻击力",
+          "main_affix_tag": "AttackDelta",
+          "main_affix_value": 352.8000000116881,
+          "sub_affix_id": [
+            {
+              "id": 3,
+              "name": "防御力",
+              "tag": "DefenceDelta",
+              "value": 38.10379200289026,
+              "cnt": 2,
+              "step": 2,
+              "weight": 0.0
+            },
+            {
+              "id": 6,
+              "name": "防御力",
+              "tag": "DefenceAddedRatio",
+              "value": 0.09719999972730875,
+              "cnt": 2,
+              "step": 2,
+              "weight": 0.0
+            },
+            {
+              "id": 8,
+              "name": "暴击率",
+              "tag": "CriticalChanceBase",
+              "value": 0.08748000185005367,
+              "cnt": 3,
+              "step": 3,
+              "weight": 1.0
+            },
+            {
+              "id": 10,
+              "name": "效果命中",
+              "tag": "StatusProbabilityBase",
+              "value": 0.043200000654906034,
+              "cnt": 1,
+              "step": 2,
+              "weight": 0.0
+            }
+          ],
+          "relic_set_id": 108,
+          "image": "/assets/relic/61082.webp",
+          "score": 11.816129032258065
+        },
+        {
+          "id": 61083,
+          "name": "天才的元域深潜",
+          "desc": "启动后形似包裹全身的潜水服，将全身的神经信号实时传输至元域空间。",
+          "type": 3,
+          "type_name": "BODY",
+          "max_level": 15,
+          "level": 15,
+          "main_affix_id": 4,
+          "main_affix_name": "暴击率",
+          "main_affix_tag": "CriticalChanceBase",
+          "main_affix_value": 0.3239999986253679,
+          "sub_affix_id": [
+            {
+              "id": 1,
+              "name": "生命值",
+              "tag": "HPDelta",
+              "value": 80.44134300481528,
+              "cnt": 2,
+              "step": 3,
+              "weight": 0.0
+            },
+            {
+              "id": 7,
+              "name": "速度",
+              "tag": "SpeedDelta",
+              "value": 4.6000000005587935,
+              "cnt": 2,
+              "step": 2,
+              "weight": 0.75
+            },
+            {
+              "id": 11,
+              "name": "效果抵抗",
+              "tag": "StatusResistanceBase",
+              "value": 0.07776000117883086,
+              "cnt": 2,
+              "step": 2,
+              "weight": 0.0
+            },
+            {
+              "id": 12,
+              "name": "击破特攻",
+              "tag": "BreakDamageAddedRatioBase",
+              "value": 0.11664000246673822,
+              "cnt": 2,
+              "step": 2,
+              "weight": 0.0
+            }
+          ],
+          "relic_set_id": 108,
+          "image": "/assets/relic/61083.webp",
+          "score": 16.65
+        },
+        {
+          "id": 61084,
+          "name": "天才的引力漫步",
+          "desc": "穿戴式引力捕获装置，形似冰鞋，能在快速滑行时倒映出群星的光芒。",
+          "type": 4,
+          "type_name": "FOOT",
+          "max_level": 15,
+          "level": 15,
+          "main_affix_id": 2,
+          "main_affix_name": "攻击力",
+          "main_affix_tag": "AttackAddedRatio",
+          "main_affix_value": 0.4320000072475523,
+          "sub_affix_id": [
+            {
+              "id": 3,
+              "name": "防御力",
+              "tag": "DefenceDelta",
+              "value": 19.05189600144513,
+              "cnt": 1,
+              "step": 1,
+              "weight": 0.0
+            },
+            {
+              "id": 9,
+              "name": "暴击伤害",
+              "tag": "CriticalDamageBase",
+              "value": 0.2462400058284402,
+              "cnt": 4,
+              "step": 6,
+              "weight": 1.0
+            },
+            {
+              "id": 10,
+              "name": "效果命中",
+              "tag": "StatusProbabilityBase",
+              "value": 0.08208000124432147,
+              "cnt": 2,
+              "step": 3,
+              "weight": 0.0
+            },
+            {
+              "id": 11,
+              "name": "效果抵抗",
+              "tag": "StatusResistanceBase",
+              "value": 0.043200000654906034,
+              "cnt": 1,
+              "step": 2,
+              "weight": 0.0
+            }
+          ],
+          "relic_set_id": 108,
+          "image": "/assets/relic/61084.webp",
+          "score": 15.85
+        },
+        {
+          "id": 63065,
+          "name": "萨尔索图的移动城市",
+          "desc": "位面封装的是萨尔索图星上仅剩的移动城市之一：风滚草。这座城市从未停下，才勉强做到不被黑夜或者极昼吞没。",
+          "type": 5,
+          "type_name": "NECK",
+          "max_level": 15,
+          "level": 15,
+          "main_affix_id": 9,
+          "main_affix_name": "量子属性伤害提高",
+          "main_affix_tag": "QuantumAddedRatio",
+          "main_affix_value": 0.38880301429890096,
+          "sub_affix_id": [
+            {
+              "id": 4,
+              "name": "生命值",
+              "tag": "HPAddedRatio",
+              "value": 0.07776000117883086,
+              "cnt": 2,
+              "step": 2,
+              "weight": 0.0
+            },
+            {
+              "id": 9,
+              "name": "暴击伤害",
+              "tag": "CriticalDamageBase",
+              "value": 0.16848000325262547,
+              "cnt": 3,
+              "step": 2,
+              "weight": 1.0
+            },
+            {
+              "id": 11,
+              "name": "效果抵抗",
+              "tag": "StatusResistanceBase",
+              "value": 0.07344000111334026,
+              "cnt": 2,
+              "step": 1,
+              "weight": 0.0
+            },
+            {
+              "id": 12,
+              "name": "击破特攻",
+              "tag": "BreakDamageAddedRatioBase",
+              "value": 0.06480000168085098,
+              "cnt": 1,
+              "step": 2,
+              "weight": 0.0
+            }
+          ],
+          "relic_set_id": 306,
+          "image": "/assets/relic/63065.webp",
+          "score": 18.2
+        },
+        {
+          "id": 63066,
+          "name": "萨尔索图的晨昏界线",
+          "desc": "停止自转的萨尔索图星的日夜周期漫长无比，人们只有追逐着「晨昏交界线」不断迁徙，才能勉强维持住仅剩的生存空间。",
+          "type": 6,
+          "type_name": "OBJECT",
+          "max_level": 15,
+          "level": 15,
+          "main_affix_id": 4,
+          "main_affix_name": "攻击力",
+          "main_affix_tag": "AttackAddedRatio",
+          "main_affix_value": 0.4320000072475523,
+          "sub_affix_id": [
+            {
+              "id": 1,
+              "name": "生命值",
+              "tag": "HPDelta",
+              "value": 38.103794001974165,
+              "cnt": 1,
+              "step": 1,
+              "weight": 0.0
+            },
+            {
+              "id": 4,
+              "name": "生命值",
+              "tag": "HPAddedRatio",
+              "value": 0.06912000104784966,
+              "cnt": 2,
+              "step": 0,
+              "weight": 0.0
+            },
+            {
+              "id": 7,
+              "name": "速度",
+              "tag": "SpeedDelta",
+              "value": 4.300000000279397,
+              "cnt": 2,
+              "step": 1,
+              "weight": 0.75
+            },
+            {
+              "id": 9,
+              "name": "暴击伤害",
+              "tag": "CriticalDamageBase",
+              "value": 0.17496000370010734,
+              "cnt": 3,
+              "step": 3,
+              "weight": 1.0
+            }
+          ],
+          "relic_set_id": 306,
+          "image": "/assets/relic/63066.webp",
+          "score": 16.125
+        }
+      ],
+      "behaviorList": [
+        {
+          "id": 1102001,
+          "level": 4,
+          "name": "强袭",
+          "type": "普攻",
+          "tag": "单攻",
+          "desc": "对指定敌方单体造成等同于希儿80%攻击力的量子属性伤害。",
+          "icon": "/assets/hash/3dc25766cb3a1542f3656de8afd55add0ef6132135d3d4fde192a407dfd7afba.webp"
+        },
+        {
+          "id": 1102002,
+          "level": 5,
+          "name": "归刃",
+          "type": "战技",
+          "tag": "单攻",
+          "desc": "使希儿的速度提高25%，并对指定敌方单体造成等同于希儿154%攻击力的量子属性伤害，速度提高效果持续2回合。",
+          "icon": "/assets/hash/7d8e04366bec92333d73088ac5a764859e6cd4639b9eef39d2ba0d992db888ff.webp"
+        },
+        {
+          "id": 1102003,
+          "level": 5,
+          "name": "乱蝶",
+          "type": "终结技",
+          "tag": "单攻",
+          "desc": "立即进入增幅状态，并对指定敌方单体造成等同于希儿323%攻击力的量子属性伤害。",
+          "icon": "/assets/hash/0b58694d637f21bd32a46d37b23baf1f2e502f0761bab031c7cfed8f9aed3d6e.webp"
+        },
+        {
+          "id": 1102004,
+          "level": 5,
+          "name": "再现",
+          "type": "天赋",
+          "tag": "强化",
+          "desc": "施放普攻、战技、终结技消灭敌方目标时立即获得1个额外回合并进入增幅状态，增幅状态下希儿施放攻击造成的伤害提高56%，持续1回合。\\n若希儿在因天赋【再现】获得的额外回合中消灭敌方目标，此天赋不会生效。",
+          "icon": "/assets/hash/031e3d850b19c3d4db0e143da5d4da9690e7f26f4be15f06aca1ad2e7aa36d1b.webp"
+        },
+        {
+          "id": 1102007,
+          "level": 1,
+          "name": "幻身",
+          "type": "秘技",
+          "tag": "强化",
+          "desc": "使用秘技后进入持续20秒的隐身状态。隐身状态下不会被敌人发现，且主动攻击敌人进入战斗时，希儿立即进入增幅状态。",
+          "icon": "/assets/hash/e0c8d8119099a67d94c6d734040e9e904157b2a8a73fa563402f2aca5d9a2c72.webp"
+        },
+        {
+          "id": 1102101,
+          "level": 1
+        },
+        {
+          "id": 1102102,
+          "level": 1
+        },
+        {
+          "id": 1102201,
+          "level": 1,
+          "name": "攻击力增加0.0400000000372529"
+        },
+        {
+          "id": 1102202,
+          "level": 1,
+          "name": "暴击伤害增加0.05299999983981252"
+        },
+        {
+          "id": 1102203,
+          "level": 1,
+          "name": "攻击力增加0.0400000000372529"
+        },
+        {
+          "id": 1102204,
+          "level": 1,
+          "name": "防御力增加0.05000000004656613"
+        },
+        {
+          "id": 1102205,
+          "level": 1,
+          "name": "攻击力增加0.060000000055879354"
+        },
+        {
+          "id": 1102206,
+          "level": 1,
+          "name": "暴击伤害增加0.0800000000745058"
+        },
+        {
+          "id": 1102207,
+          "level": 1,
+          "name": "攻击力增加0.060000000055879354"
+        }
+      ],
+      "properties": {
+        "attackBase": 1062.204,
+        "attackDelta": 1482.985071606297,
+        "defenseBase": 717.2249999999999,
+        "defenseDelta": 232.4454776465718,
+        "hpBase": 1726.944,
+        "hpDelta": 1077.798675582247,
+        "criticalChance": 0.815440003015101,
+        "criticalDamage": 1.3263600142672658,
+        "speedBase": 115.0,
+        "speedAdd": 14.100000001955777,
+        "aggro": 75.0,
+        "statusResistance": 0.19440000294707716,
+        "statusProbability": 0.1252800018992275,
+        "breakDamageAdded": 0.1814400041475892,
+        "healRatio": 0.0,
+        "physicalAdded": 0.0,
+        "fireAdded": 0.0,
+        "iceAdded": 0.0,
+        "thunderAdded": 0.0,
+        "windAdded": 0.0,
+        "quantumAdded": 0.4888030143920332,
+        "imaginaryAdded": 0.0,
+        "spRatio": 0.0
+      },
+      "images": {
+        "icon": "/assets/avatar/seele_icon.webp",
+        "bg": "/assets/avatar/seele_bg.webp",
+        "fig": "/assets/avatar/seele_fig.webp",
+        "fg": "/assets/avatar/seele_fg.webp",
+        "art": "/assets/avatar/seele_art.webp",
+        "mini_icon": "/assets/avatar/seele_miniIcon.webp",
+        "splash_icon": "/assets/avatar/seele_splashIcon.webp"
+      },
+      "ranks": [
+        {
+          "image": "/assets/hash/56a9be2b9e98f2f997108499b65b029469a392d6a2d36e7fb6ec9d3fde3c4d1a.webp",
+          "name": "斩尽",
+          "desc": "对当前生命值百分比小于等于80%的敌方目标造成伤害时，暴击率提高15%。",
+          "activate": false
+        },
+        {
+          "image": "/assets/hash/f8912ea29ebc428335a54ca7b1f89be47e5f23b44dcfba789549c4b77a73cd4e.webp",
+          "name": "蝶舞",
+          "desc": "战技的加速效果可以叠加，最多叠加2层。",
+          "activate": false
+        },
+        {
+          "image": "/assets/hash/11be4a7265373af56c41688243f0cd5ae37ee02df7878700c3283b536ea9c6f1.webp",
+          "name": "缭乱",
+          "desc": "战技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+          "activate": false
+        },
+        {
+          "image": "/assets/hash/9eac8cad91e0501ffdaeab4571f8a74d562c532a0d8e0e24e8d17cd49b301aff.webp",
+          "name": "掠影",
+          "desc": "希儿消灭敌方目标时，自身恢复15点能量。",
+          "activate": false
+        },
+        {
+          "image": "/assets/hash/e5450fddc3f6c0e50f9f8012a539bf2af1318cdc4ba1e3215af7aabbc2fa8091.webp",
+          "name": "锋锐",
+          "desc": "终结技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+          "activate": false
+        },
+        {
+          "image": "/assets/hash/38d038492be0bd081aee0530f492e4b4e7d9c6b229be43c99e66a2583aebc9be.webp",
+          "name": "离析",
+          "desc": "施放终结技后使受到攻击的敌方单体陷入【乱蝶】状态，持续1回合。【乱蝶】状态下的敌方目标受到攻击后，额外受到1次等同于希儿终结技伤害15%的量子属性附加伤害。若该目标被我方其他目标触发【乱蝶】状态的附加伤害消灭，将不会触发希儿的天赋。当希儿陷入无法战斗状态时，敌方目标的【乱蝶】状态被解除。",
+          "activate": false
+        }
+      ],
+      "relic_score": 104.77983870967742
+    },
+    "displayAvatars": [
+      {
+        "rank": 0,
+        "position": 0,
+        "avatarId": 1101,
+        "name": "布洛妮娅",
+        "vo_tag": "bronya",
+        "desc": "贝洛伯格「大守护者」的继承人。 兼有公主的高傲和军人的坚贞。",
+        "rarity": "CombatPowerAvatarRarityType5",
+        "damage_type": "Wind",
+        "level": 60,
+        "equipment": {
+          "level": 60,
+          "id": 20012,
+          "promotion": 4,
+          "rank": 5,
+          "name": "轮契",
+          "desc": "自时光中凝取的稀薄力量。正是所有微不足道的刹那，编织成了壮绝的命运。\\n\\n<i>「没有比这更和谐的声响，人人各就其位，庞大的机器应声而动。」</i>",
+          "basic_desc": "同谐命途专属的光锥，光锥技能仅对该命途生效。",
+          "skill_name": "速决",
+          "skill_desc": "使装备者施放攻击或受到攻击后，额外恢复8点能量，该效果单个回合内不可重复触发。",
+          "rarity": "CombatPowerLightconeRarity3",
+          "images": {
+            "icon": "/assets/lightcones/20012_icon.webp",
+            "art": "/assets/lightcones/20012_art.webp",
+            "medium_icon": "/assets/lightcones/20012_mediumIcon.webp"
+          }
+        },
+        "promotion": 4,
+        "relics": [
+          {
+            "id": 61031,
+            "name": "圣骑的宽恕盔面",
+            "desc": "如同宗教石雕宽恕女神的面具头盔，用以隐藏自己的相貌。",
+            "type": 1,
+            "type_name": "HEAD",
+            "max_level": 15,
+            "level": 10,
+            "main_affix_id": 1,
+            "main_affix_name": "生命值",
+            "main_affix_tag": "HPDelta",
+            "main_affix_value": 508.032000006875,
+            "sub_affix_id": [
+              {
+                "id": 2,
+                "name": "攻击力",
+                "tag": "AttackDelta",
+                "value": 38.10379200289026,
+                "cnt": 2,
+                "step": 2,
+                "weight": 0.0
+              },
+              {
+                "id": 4,
+                "name": "生命值",
+                "tag": "HPAddedRatio",
+                "value": 0.03888000058941543,
+                "cnt": 1,
+                "step": 1,
+                "weight": 0.0
+              },
+              {
+                "id": 5,
+                "name": "攻击力",
+                "tag": "AttackAddedRatio",
+                "value": 0.043200000654906034,
+                "cnt": 1,
+                "step": 2,
+                "weight": 0.0
+              },
+              {
+                "id": 6,
+                "name": "防御力",
+                "tag": "DefenceAddedRatio",
+                "value": 0.08639999991282821,
+                "cnt": 2,
+                "step": 0,
+                "weight": 0.0
+              }
+            ],
+            "relic_set_id": 103,
+            "image": "/assets/relic/61031.webp",
+            "score": 0.0
+          },
+          {
+            "id": 61062,
+            "name": "铁卫的银鳞手甲",
+            "desc": "闪耀着银光的金属手甲，复合的机械结构深藏其中。",
+            "type": 2,
+            "type_name": "HAND",
+            "max_level": 15,
+            "level": 3,
+            "main_affix_id": 1,
+            "main_affix_name": "攻击力",
+            "main_affix_tag": "AttackDelta",
+            "main_affix_value": 115.71840000222437,
+            "sub_affix_id": [
+              {
+                "id": 6,
+                "name": "防御力",
+                "tag": "DefenceAddedRatio",
+                "value": 0.05399999977089465,
+                "cnt": 1,
+                "step": 2,
+                "weight": 0.0
+              },
+              {
+                "id": 7,
+                "name": "速度",
+                "tag": "SpeedDelta",
+                "value": 2.6000000005587935,
+                "cnt": 1,
+                "step": 2,
+                "weight": 1.0
+              },
+              {
+                "id": 9,
+                "name": "暴击伤害",
+                "tag": "CriticalDamageBase",
+                "value": 0.05184000078588724,
+                "cnt": 1,
+                "step": 0,
+                "weight": 1.0
+              },
+              {
+                "id": 12,
+                "name": "击破特攻",
+                "tag": "BreakDamageAddedRatioBase",
+                "value": 0.05832000123336911,
+                "cnt": 1,
+                "step": 1,
+                "weight": 0.0
+              }
+            ],
+            "relic_set_id": 106,
+            "image": "/assets/relic/61062.webp",
+            "score": 9.533333333333333
+          },
+          {
+            "id": 61063,
+            "name": "铁卫的旧制军服",
+            "desc": "熨烫妥帖的银鬃铁卫旧制军服，结实的排扣将布料压出褶痕。",
+            "type": 3,
+            "type_name": "BODY",
+            "max_level": 15,
+            "level": 0,
+            "main_affix_id": 5,
+            "main_affix_name": "暴击伤害",
+            "main_affix_tag": "CriticalDamageBase",
+            "main_affix_value": 0.10368000087328257,
+            "sub_affix_id": [
+              {
+                "id": 4,
+                "name": "生命值",
+                "tag": "HPAddedRatio",
+                "value": 0.03888000058941543,
+                "cnt": 1,
+                "step": 1,
+                "weight": 0.0
+              },
+              {
+                "id": 5,
+                "name": "攻击力",
+                "tag": "AttackAddedRatio",
+                "value": 0.043200000654906034,
+                "cnt": 1,
+                "step": 2,
+                "weight": 0.0
+              },
+              {
+                "id": 8,
+                "name": "暴击率",
+                "tag": "CriticalChanceBase",
+                "value": 0.03240000084042549,
+                "cnt": 1,
+                "step": 2,
+                "weight": 0.0
+              },
+              {
+                "id": 12,
+                "name": "击破特攻",
+                "tag": "BreakDamageAddedRatioBase",
+                "value": 0.05832000123336911,
+                "cnt": 1,
+                "step": 1,
+                "weight": 0.0
+              }
+            ],
+            "relic_set_id": 106,
+            "image": "/assets/relic/61063.webp",
+            "score": 15.0
+          },
+          {
+            "id": 61034,
+            "name": "圣骑的秩序铁靴",
+            "desc": "净庭教会骑士的标准骑士长靴，脚后跟上刻印着简短的单词：「秩序」。",
+            "type": 4,
+            "type_name": "FOOT",
+            "max_level": 15,
+            "level": 15,
+            "main_affix_id": 4,
+            "main_affix_name": "速度",
+            "main_affix_tag": "SpeedDelta",
+            "main_affix_value": 25.03200000547804,
+            "sub_affix_id": [
+              {
+                "id": 1,
+                "name": "生命值",
+                "tag": "HPDelta",
+                "value": 105.8438720041886,
+                "cnt": 3,
+                "step": 1,
+                "weight": 0.0
+              },
+              {
+                "id": 2,
+                "name": "攻击力",
+                "tag": "AttackDelta",
+                "value": 42.337546004448086,
+                "cnt": 2,
+                "step": 4,
+                "weight": 0.0
+              },
+              {
+                "id": 5,
+                "name": "攻击力",
+                "tag": "AttackAddedRatio",
+                "value": 0.043200000654906034,
+                "cnt": 1,
+                "step": 2,
+                "weight": 0.0
+              },
+              {
+                "id": 6,
+                "name": "防御力",
+                "tag": "DefenceAddedRatio",
+                "value": 0.10259999963454902,
+                "cnt": 2,
+                "step": 3,
+                "weight": 0.0
+              }
+            ],
+            "relic_set_id": 103,
+            "image": "/assets/relic/61034.webp",
+            "score": 15.0
+          },
+          {
+            "id": 53025,
+            "name": "罗浮仙舟的天外楼船",
+            "desc": "泛于星海的罗浮仙舟被收拢于球中，玉界门上浮槎去来，若星月之出入。无数人曾来此寻求长生之秘，却又失望而归。",
+            "type": 5,
+            "type_name": "NECK",
+            "max_level": 12,
+            "level": 0,
+            "main_affix_id": 3,
+            "main_affix_name": "防御力",
+            "main_affix_tag": "DefenceAddedRatio",
+            "main_affix_value": 0.0691199996508658,
+            "sub_affix_id": [
+              {
+                "id": 5,
+                "name": "攻击力",
+                "tag": "AttackAddedRatio",
+                "value": 0.031104000750929117,
+                "cnt": 1,
+                "step": 1,
+                "weight": 0.0
+              },
+              {
+                "id": 10,
+                "name": "效果命中",
+                "tag": "StatusProbabilityBase",
+                "value": 0.031104000750929117,
+                "cnt": 1,
+                "step": 1,
+                "weight": 0.0
+              }
+            ],
+            "relic_set_id": 302,
+            "image": "/assets/relic/53025.webp",
+            "score": 0.0
+          },
+          {
+            "id": 53026,
+            "name": "罗浮仙舟的建木枝蔓",
+            "desc": "曾经罗浮仙舟因建木生发，成为仙舟舰队之尊；后来罗浮仙舟因建木成祸，自食长寿恶果…建木枝蔓已经牢牢缠住罗浮命运，难以分离。",
+            "type": 6,
+            "type_name": "OBJECT",
+            "max_level": 12,
+            "level": 12,
+            "main_affix_id": 2,
+            "main_affix_name": "能量恢复效率",
+            "main_affix_tag": "SPRatioBase",
+            "main_affix_value": 0.129391000373289,
+            "sub_affix_id": [
+              {
+                "id": 2,
+                "name": "攻击力",
+                "tag": "AttackDelta",
+                "value": 13.548016000073403,
+                "cnt": 1,
+                "step": 0,
+                "weight": 0.0
+              },
+              {
+                "id": 3,
+                "name": "防御力",
+                "tag": "DefenceDelta",
+                "value": 28.78953400091268,
+                "cnt": 2,
+                "step": 1,
+                "weight": 0.0
+              },
+              {
+                "id": 4,
+                "name": "生命值",
+                "tag": "HPAddedRatio",
+                "value": 0.03456000122241676,
+                "cnt": 1,
+                "step": 2,
+                "weight": 0.0
+              },
+              {
+                "id": 9,
+                "name": "暴击伤害",
+                "tag": "CriticalDamageBase",
+                "value": 0.14515200373716652,
+                "cnt": 3,
+                "step": 4,
+                "weight": 1.0
+              }
+            ],
+            "relic_set_id": 302,
+            "image": "/assets/relic/53026.webp",
+            "score": 3.4
+          }
+        ],
+        "behaviorList": [
+          {
+            "id": 1101001,
+            "level": 2,
+            "name": "驭风的子弹",
+            "type": "普攻",
+            "tag": "单攻",
+            "desc": "对指定敌方单体造成等同于布洛妮娅60%攻击力的风属性伤害。",
+            "icon": "/assets/hash/71c81ecfb436d5e7f326d39471b3c2f190ec56300a71bd4e1f97640a8dbd3f47.webp"
+          },
+          {
+            "id": 1101002,
+            "level": 4,
+            "name": "作战再部署",
+            "type": "战技",
+            "tag": "辅助",
+            "desc": "解除指定我方单体的1个负面效果，并使该目标立即行动，造成的伤害提高43%，持续1回合。\\n当对自身施放该技能时，无法触发立即行动效果。",
+            "icon": "/assets/hash/1c0b1d3bbd2b7376e6934f4ae327361d80d54137a5f16ccbe5830eabf235ffe0.webp"
+          },
+          {
+            "id": 1101003,
+            "level": 5,
+            "name": "贝洛伯格进行曲",
+            "type": "终结技",
+            "tag": "辅助",
+            "desc": "使我方全体攻击力提高42%，同时提高等同于布洛妮娅14%暴击伤害+15%的暴击伤害，持续2回合。",
+            "icon": "/assets/hash/97459612506624e7a1ea8dbc485b2fede3ab5c7b5dab887c41594cd6b92bad2f.webp"
+          },
+          {
+            "id": 1101004,
+            "level": 3,
+            "name": "先人一步",
+            "type": "天赋",
+            "tag": "强化",
+            "desc": "施放普攻后，布洛妮娅的下一次行动提前18%。",
+            "icon": "/assets/hash/af4b47219312bba33ddc3d06dec20136ae3313551cdaf78be06f76448476e39f.webp"
+          },
+          {
+            "id": 1101007,
+            "level": 1,
+            "name": "在旗帜下",
+            "type": "秘技",
+            "tag": "辅助",
+            "desc": "使用秘技后，下一次战斗开始时使我方全体攻击力提高15%，持续2回合。",
+            "icon": "/assets/hash/0e1d0e8ee9e043657c77874148bdd0901db777dc33d3e5dab84437789275bfe4.webp"
+          },
+          {
+            "id": 1101101,
+            "level": 1
+          },
+          {
+            "id": 1101201,
+            "level": 1,
+            "name": "风属性伤害提高增加0.031999999890103936"
+          },
+          {
+            "id": 1101202,
+            "level": 1,
+            "name": "暴击伤害增加0.05299999983981252"
+          }
+        ],
+        "properties": {
+          "attackBase": 667.8,
+          "attackDelta": 317.02588702314534,
+          "defenseBase": 593.1299999999999,
+          "defenseDelta": 302.88676907233656,
+          "hpBase": 1546.368,
+          "hpDelta": 973.1280896570961,
+          "criticalChance": 0.0824000008404255,
+          "criticalDamage": 0.8536720052361488,
+          "speedBase": 99.0,
+          "speedAdd": 27.632000006036833,
+          "aggro": 100.0,
+          "statusResistance": 0.0,
+          "statusProbability": 0.031104000750929117,
+          "breakDamageAdded": 0.11664000246673822,
+          "healRatio": 0.0,
+          "physicalAdded": 0.0,
+          "fireAdded": 0.0,
+          "iceAdded": 0.0,
+          "thunderAdded": 0.0,
+          "windAdded": 0.031999999890103936,
+          "quantumAdded": 0.0,
+          "imaginaryAdded": 0.0,
+          "spRatio": 0.129391000373289
+        },
+        "images": {
+          "icon": "/assets/avatar/bronya_icon.webp",
+          "bg": "/assets/avatar/bronya_bg.webp",
+          "fig": "/assets/avatar/bronya_fig.webp",
+          "fg": "/assets/avatar/bronya_fg.webp",
+          "art": "/assets/avatar/bronya_art.webp",
+          "mini_icon": "/assets/avatar/bronya_miniIcon.webp",
+          "splash_icon": "/assets/avatar/bronya_splashIcon.webp"
+        },
+        "ranks": [
+          {
+            "image": "/assets/hash/f76fc71fe532ff644df5522a6541d5970783fbeeb04c4f11b29fa344e2eb36ae.webp",
+            "name": "养精蓄锐",
+            "desc": "施放战技时，有50%固定概率恢复1个战技点，该效果有1回合的触发冷却。",
+            "activate": false
+          },
+          {
+            "image": "/assets/hash/43746abe73215a5325802ea470ca97170943c151f38823f0f8d73888c4a08898.webp",
+            "name": "快速行军",
+            "desc": "施放战技时，被指定的我方目标在行动后速度提高30%，持续1回合。",
+            "activate": false
+          },
+          {
+            "image": "/assets/hash/986959668883d50b9a6632a24d6bc0ce671bea47de2221c48c98389ce76b6152.webp",
+            "name": "鼓炮齐鸣",
+            "desc": "终结技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+            "activate": false
+          },
+          {
+            "image": "/assets/hash/8a624bd9da254480123bcf3b1ca27f1f89a0f1d04702d8df44094dfc69fe293a.webp",
+            "name": "攻其不备",
+            "desc": "我方其他角色对弱点为风属性的敌方目标施放普攻后，布洛妮娅立即进行1次追加攻击，对该目标造成等同于普攻伤害80%的风属性伤害，该效果每回合可触发1次。",
+            "activate": false
+          },
+          {
+            "image": "/assets/hash/36052e2484e82b6621315cea8235494fc3fceebfabc62d18efa4842fe214d792.webp",
+            "name": "所向克捷",
+            "desc": "战技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+            "activate": false
+          },
+          {
+            "image": "/assets/hash/7e64c42ea80c261f077c7b6ee1fddf7974d68fce70df4ad892b8e6fc37dbfbc6.webp",
+            "name": "气贯长虹",
+            "desc": "战技对指定我方目标造成的伤害提高效果的持续时间增加1回合。",
+            "activate": false
+          }
+        ],
+        "relic_score": 42.93333333333333
+      },
+      {
+        "rank": 1,
+        "position": 1,
+        "avatarId": 1107,
+        "name": "克拉拉",
+        "vo_tag": "clara",
+        "desc": "与机械生活在一起的流浪少女。 内向、温柔，有一颗纯粹的心。 渴望下层区的大家都能成为彼此的「家人」。",
+        "rarity": "CombatPowerAvatarRarityType5",
+        "damage_type": "Physical",
+        "level": 71,
+        "equipment": {
+          "level": 70,
+          "id": 24000,
+          "promotion": 5,
+          "rank": 1,
+          "name": "记一位星神的陨落",
+          "desc": "从一道光开始。\\n祂们坠落，陨灭的威胁居高临下。\\n祂们不得不停止自我复制，争先恐后拥抱彼此，\\n试图用繁殖的权利为代价，换取生存的可能。\\n祂们携手，从未如此团结\\n——但命途戛然而止，\\n祂们趋向真正的死亡。",
+          "basic_desc": "毁灭命途专属的光锥，光锥技能仅对该命途生效。",
+          "skill_name": "扑火",
+          "skill_desc": "当装备者施放攻击时，使装备者本场战斗中的攻击力提高8%，该效果最多叠加4层。当装备者击破敌方目标弱点后，造成的伤害提高12%，持续2回合。",
+          "rarity": "CombatPowerLightconeRarity5",
+          "images": {
+            "icon": "/assets/lightcones/24000_icon.webp",
+            "art": "/assets/lightcones/24000_art.webp",
+            "medium_icon": "/assets/lightcones/24000_mediumIcon.webp"
+          }
+        },
+        "promotion": 6,
+        "relics": [
+          {
+            "id": 61021,
+            "name": "快枪手的野穗毡帽",
+            "desc": "一顶绑着野生麦穗的牛仔毡帽，传奇枪手奥克莱的标志。",
+            "type": 1,
+            "type_name": "HEAD",
+            "max_level": 15,
+            "level": 15,
+            "main_affix_id": 1,
+            "main_affix_name": "生命值",
+            "main_affix_tag": "HPDelta",
+            "main_affix_value": 705.6000000101048,
+            "sub_affix_id": [
+              {
+                "id": 3,
+                "name": "防御力",
+                "tag": "DefenceDelta",
+                "value": 16.935019000666216,
+                "cnt": 1,
+                "step": 0,
+                "weight": 0.0
+              },
+              {
+                "id": 5,
+                "name": "攻击力",
+                "tag": "AttackAddedRatio",
+                "value": 0.043200000654906034,
+                "cnt": 1,
+                "step": 2,
+                "weight": 0.75
+              },
+              {
+                "id": 9,
+                "name": "暴击伤害",
+                "tag": "CriticalDamageBase",
+                "value": 0.1620000028051436,
+                "cnt": 3,
+                "step": 1,
+                "weight": 1.0
+              },
+              {
+                "id": 11,
+                "name": "效果抵抗",
+                "tag": "StatusResistanceBase",
+                "value": 0.1166400017682463,
+                "cnt": 3,
+                "step": 3,
+                "weight": 0.0
+              }
+            ],
+            "relic_set_id": 102,
+            "image": "/assets/relic/61021.webp",
+            "score": 14.322580645161292
+          },
+          {
+            "id": 61052,
+            "name": "拳王的重炮拳套",
+            "desc": "保养得极好的拳击手套，细微的破损并不影响实际的使用。",
+            "type": 2,
+            "type_name": "HAND",
+            "max_level": 15,
+            "level": 15,
+            "main_affix_id": 1,
+            "main_affix_name": "攻击力",
+            "main_affix_tag": "AttackDelta",
+            "main_affix_value": 352.8000000116881,
+            "sub_affix_id": [
+              {
+                "id": 3,
+                "name": "防御力",
+                "tag": "DefenceDelta",
+                "value": 35.986915002111346,
+                "cnt": 2,
+                "step": 1,
+                "weight": 0.0
+              },
+              {
+                "id": 4,
+                "name": "生命值",
+                "tag": "HPAddedRatio",
+                "value": 0.08208000124432147,
+                "cnt": 2,
+                "step": 3,
+                "weight": 0.5
+              },
+              {
+                "id": 9,
+                "name": "暴击伤害",
+                "tag": "CriticalDamageBase",
+                "value": 0.12960000336170197,
+                "cnt": 2,
+                "step": 4,
+                "weight": 1.0
+              },
+              {
+                "id": 10,
+                "name": "效果命中",
+                "tag": "StatusProbabilityBase",
+                "value": 0.07776000117883086,
+                "cnt": 2,
+                "step": 2,
+                "weight": 0.0
+              }
+            ],
+            "relic_set_id": 105,
+            "image": "/assets/relic/61052.webp",
+            "score": 12.711290322580645
+          },
+          {
+            "id": 61053,
+            "name": "拳王的贴身护胸",
+            "desc": "拳击手的专业护胸，外罩和内衬垫相互组合，既保障了安全又不影响技术发挥。",
+            "type": 3,
+            "type_name": "BODY",
+            "max_level": 15,
+            "level": 15,
+            "main_affix_id": 4,
+            "main_affix_name": "暴击率",
+            "main_affix_tag": "CriticalChanceBase",
+            "main_affix_value": 0.3239999986253679,
+            "sub_affix_id": [
+              {
+                "id": 4,
+                "name": "生命值",
+                "tag": "HPAddedRatio",
+                "value": 0.07776000117883086,
+                "cnt": 2,
+                "step": 2,
+                "weight": 0.5
+              },
+              {
+                "id": 5,
+                "name": "攻击力",
+                "tag": "AttackAddedRatio",
+                "value": 0.07776000117883086,
+                "cnt": 2,
+                "step": 2,
+                "weight": 0.75
+              },
+              {
+                "id": 6,
+                "name": "防御力",
+                "tag": "DefenceAddedRatio",
+                "value": 0.09719999972730875,
+                "cnt": 2,
+                "step": 2,
+                "weight": 0.0
+              },
+              {
+                "id": 7,
+                "name": "速度",
+                "tag": "SpeedDelta",
+                "value": 4.90000000083819,
+                "cnt": 2,
+                "step": 3,
+                "weight": 0.0
+              }
+            ],
+            "relic_set_id": 105,
+            "image": "/assets/relic/61053.webp",
+            "score": 17.75
+          },
+          {
+            "id": 61024,
+            "name": "快枪手的铆钉马靴",
+            "desc": "马靴有着V形剪裁的开口，看上去随性松弛，穿起来非常舒适。",
+            "type": 4,
+            "type_name": "FOOT",
+            "max_level": 15,
+            "level": 15,
+            "main_affix_id": 2,
+            "main_affix_name": "攻击力",
+            "main_affix_tag": "AttackAddedRatio",
+            "main_affix_value": 0.4320000072475523,
+            "sub_affix_id": [
+              {
+                "id": 2,
+                "name": "攻击力",
+                "tag": "AttackDelta",
+                "value": 55.038811003556475,
+                "cnt": 3,
+                "step": 2,
+                "weight": 0.5
+              },
+              {
+                "id": 3,
+                "name": "防御力",
+                "tag": "DefenceDelta",
+                "value": 35.986915002111346,
+                "cnt": 2,
+                "step": 1,
+                "weight": 0.0
+              },
+              {
+                "id": 4,
+                "name": "生命值",
+                "tag": "HPAddedRatio",
+                "value": 0.03888000058941543,
+                "cnt": 1,
+                "step": 1,
+                "weight": 0.5
+              },
+              {
+                "id": 8,
+                "name": "暴击率",
+                "tag": "CriticalChanceBase",
+                "value": 0.05832000123336911,
+                "cnt": 2,
+                "step": 2,
+                "weight": 1.0
+              }
+            ],
+            "relic_set_id": 102,
+            "image": "/assets/relic/61024.webp",
+            "score": 15.600000000000001
+          },
+          {
+            "id": 63065,
+            "name": "萨尔索图的移动城市",
+            "desc": "位面封装的是萨尔索图星上仅剩的移动城市之一：风滚草。这座城市从未停下，才勉强做到不被黑夜或者极昼吞没。",
+            "type": 5,
+            "type_name": "NECK",
+            "max_level": 15,
+            "level": 15,
+            "main_affix_id": 4,
+            "main_affix_name": "物理属性伤害提高",
+            "main_affix_tag": "PhysicalAddedRatio",
+            "main_affix_value": 0.38880301429890096,
+            "sub_affix_id": [
+              {
+                "id": 3,
+                "name": "防御力",
+                "tag": "DefenceDelta",
+                "value": 35.986915002111346,
+                "cnt": 2,
+                "step": 1,
+                "weight": 0.0
+              },
+              {
+                "id": 5,
+                "name": "攻击力",
+                "tag": "AttackAddedRatio",
+                "value": 0.1296000019647181,
+                "cnt": 3,
+                "step": 6,
+                "weight": 0.75
+              },
+              {
+                "id": 8,
+                "name": "暴击率",
+                "tag": "CriticalChanceBase",
+                "value": 0.05184000078588724,
+                "cnt": 2,
+                "step": 0,
+                "weight": 1.0
+              },
+              {
+                "id": 12,
+                "name": "击破特攻",
+                "tag": "BreakDamageAddedRatioBase",
+                "value": 0.11664000246673822,
+                "cnt": 2,
+                "step": 2,
+                "weight": 0.0
+              }
+            ],
+            "relic_set_id": 306,
+            "image": "/assets/relic/63065.webp",
+            "score": 19.7
+          },
+          {
+            "id": 63066,
+            "name": "萨尔索图的晨昏界线",
+            "desc": "停止自转的萨尔索图星的日夜周期漫长无比，人们只有追逐着「晨昏交界线」不断迁徙，才能勉强维持住仅剩的生存空间。",
+            "type": 6,
+            "type_name": "OBJECT",
+            "max_level": 15,
+            "level": 15,
+            "main_affix_id": 4,
+            "main_affix_name": "攻击力",
+            "main_affix_tag": "AttackAddedRatio",
+            "main_affix_value": 0.4320000072475523,
+            "sub_affix_id": [
+              {
+                "id": 3,
+                "name": "防御力",
+                "tag": "DefenceDelta",
+                "value": 38.10379200289026,
+                "cnt": 2,
+                "step": 2,
+                "weight": 0.0
+              },
+              {
+                "id": 6,
+                "name": "防御力",
+                "tag": "DefenceAddedRatio",
+                "value": 0.043199999956414104,
+                "cnt": 1,
+                "step": 0,
+                "weight": 0.0
+              },
+              {
+                "id": 9,
+                "name": "暴击伤害",
+                "tag": "CriticalDamageBase",
+                "value": 0.10368000157177448,
+                "cnt": 2,
+                "step": 0,
+                "weight": 1.0
+              },
+              {
+                "id": 11,
+                "name": "效果抵抗",
+                "tag": "StatusResistanceBase",
+                "value": 0.1252800018992275,
+                "cnt": 3,
+                "step": 5,
+                "weight": 0.0
+              }
+            ],
+            "relic_set_id": 306,
+            "image": "/assets/relic/63066.webp",
+            "score": 13.25
+          }
+        ],
+        "behaviorList": [
+          {
+            "id": 1107001,
+            "level": 2,
+            "name": "我也想帮上忙",
+            "type": "普攻",
+            "tag": "单攻",
+            "desc": "对指定敌方单体造成等同于克拉拉60%攻击力的物理属性伤害。",
+            "icon": "/assets/hash/a56a8dd217b79ffc2557b9b6ee7ca0e8f9ac596ce78704cfb8572793692a4975.webp"
+          },
+          {
+            "id": 1107002,
+            "level": 3,
+            "name": "史瓦罗在看着你",
+            "type": "战技",
+            "tag": "群攻",
+            "desc": "对敌方全体造成等同于克拉拉72%攻击力的物理属性伤害，并对所有被史瓦罗标上【反击标记】的敌方目标额外造成等同于克拉拉72%攻击力物理属性伤害。\\n战技施放后所有【反击标记】失效。",
+            "icon": "/assets/hash/c733f760b7c0b9b08cd348e80be013fae237c2712127681e68c58942737dac41.webp"
+          },
+          {
+            "id": 1107003,
+            "level": 5,
+            "name": "是约定不是命令",
+            "type": "终结技",
+            "tag": "强化",
+            "desc": "施放终结技后克拉拉受到的伤害额外降低19%且被敌方目标攻击的概率大幅提高，持续2回合。\\n同时史瓦罗的反击得到强化，当任意我方目标受到攻击后史瓦罗立即施放反击，对敌方目标造成的伤害倍率提高122%，并对其相邻目标造成相当于主目标50%的伤害。强化效果可生效2次。",
+            "icon": "/assets/hash/ce7af5b7d5ea1e0fea993c2dc6d2b8a4cf06f28372bb0648029ee754469a1e5f.webp"
+          },
+          {
+            "id": 1107004,
+            "level": 5,
+            "name": "因为我们是家人",
+            "type": "天赋",
+            "tag": "单攻",
+            "desc": "克拉拉在史瓦罗的保护下受到敌方目标攻击的伤害降低10%。攻击克拉拉的敌方目标会被史瓦罗标上【反击标记】，并遭到史瓦罗的反击，对其造成等同于克拉拉112%攻击力的物理属性伤害。",
+            "icon": "/assets/hash/0cf0ee129cd4db07eb16e4c59da3690937f45cfe6780d6a9949efeb203858819.webp"
+          },
+          {
+            "id": 1107007,
+            "level": 1,
+            "name": "胜利的小小代价",
+            "type": "秘技",
+            "tag": "",
+            "desc": "立即攻击敌人，进入战斗后克拉拉受到敌方攻击的概率提高，持续2回合。",
+            "icon": "/assets/hash/b2bb21eba04d3fa208a4d8698169257e73af1a7376832b91304e6b8ea8c1825f.webp"
+          },
+          {
+            "id": 1107101,
+            "level": 1
+          },
+          {
+            "id": 1107201,
+            "level": 1,
+            "name": "攻击力增加0.0400000000372529"
+          },
+          {
+            "id": 1107202,
+            "level": 1,
+            "name": "物理属性伤害提高增加0.031999999890103936"
+          }
+        ],
+        "properties": {
+          "attackBase": 1147.008,
+          "attackDelta": 1869.7693486490214,
+          "defenseBase": 796.5,
+          "defenseDelta": 274.82815575797576,
+          "hpBase": 2075.424,
+          "hpDelta": 1118.0282635424603,
+          "criticalChance": 0.5641600007191301,
+          "criticalDamage": 0.89528000773862,
+          "speedBase": 90.0,
+          "speedAdd": 4.90000000083819,
+          "aggro": 125.0,
+          "statusResistance": 0.2419200036674738,
+          "statusProbability": 0.07776000117883086,
+          "breakDamageAdded": 0.11664000246673822,
+          "healRatio": 0.0,
+          "physicalAdded": 0.5208030142821372,
+          "fireAdded": 0.0,
+          "iceAdded": 0.0,
+          "thunderAdded": 0.0,
+          "windAdded": 0.0,
+          "quantumAdded": 0.0,
+          "imaginaryAdded": 0.0,
+          "spRatio": 0.0
+        },
+        "images": {
+          "icon": "/assets/avatar/clara_icon.webp",
+          "bg": "/assets/avatar/clara_bg.webp",
+          "fig": "/assets/avatar/clara_fig.webp",
+          "fg": "/assets/avatar/clara_fg.webp",
+          "art": "/assets/avatar/clara_art.webp",
+          "mini_icon": "/assets/avatar/clara_miniIcon.webp",
+          "splash_icon": "/assets/avatar/clara_splashIcon.webp"
+        },
+        "ranks": [
+          {
+            "image": "/assets/hash/4a7c180ec7c961faee21e24fbc057174789723c19f85add6cf47236cbf8bdd2b.webp",
+            "name": "高大的背影",
+            "desc": "施放战技后，不会清除敌方目标的【反击标记】。",
+            "activate": true
+          },
+          {
+            "image": "/assets/hash/eef148752ed1f5a8d070b4f53dfb1dcd68a9d409c63a538724dd425330b11d8f.webp",
+            "name": "紧紧的拥抱",
+            "desc": "施放终结技后攻击力提高30%，持续2回合。",
+            "activate": false
+          },
+          {
+            "image": "/assets/hash/4e2c3cf3098eb4b75980adb81c38a07be1474aefe72a4fb56b5316834bded740.webp",
+            "name": "冰冷的钢甲",
+            "desc": "战技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+            "activate": false
+          },
+          {
+            "image": "/assets/hash/bcc5e475f5f14a2cae5a94cc654c301c00027d5444e838265e234d3a93d9217b.webp",
+            "name": "家人的温暖",
+            "desc": "受到攻击后，克拉拉受到的伤害降低30%，效果持续到自己的下个回合开始。",
+            "activate": false
+          },
+          {
+            "image": "/assets/hash/c039825cb8396fadd31ba5faf689697494227d463f77f7905dcea398ca74375d.webp",
+            "name": "小小的承诺",
+            "desc": "终结技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+            "activate": false
+          },
+          {
+            "image": "/assets/hash/238257725efa29126a176bf6b02954d76fac8bcef1876390b11bb75c2f8063cf.webp",
+            "name": "长久的陪伴",
+            "desc": "我方其他目标遭到攻击后，史瓦罗也有50%的固定概率触发对攻击者的反击，并对攻击目标添加【反击标记】。施放终结技时，额外增加1次强化反击的次数。",
+            "activate": false
+          }
+        ],
+        "relic_score": 93.33387096774193
+      },
+      {
+        "rank": 0,
+        "position": 2,
+        "avatarId": 1204,
+        "name": "景元",
+        "vo_tag": "jingyuan",
+        "desc": "仙舟联盟帝弓七天将之一，负责节制罗浮云骑军的「神策将军」。 师从前代「罗浮」剑首，但并不显名于武力。",
+        "rarity": "CombatPowerAvatarRarityType5",
+        "damage_type": "Thunder",
+        "level": 70,
+        "equipment": {
+          "level": 70,
+          "id": 21034,
+          "promotion": 5,
+          "rank": 1,
+          "name": "今日亦是和平的一日",
+          "desc": "牌戏的新玩法刚有了眉头，午休又借了闲书。\\n掐指一算，余下的工作慢慢做，正好能做到下班。\\n她不慌不忙，躲入一隅。\\n\\n美好的闲散时光，绝不能被任何人打扰\\n——就算是符太卜也不能。\\n只是万一，要是有个万一……\\n\\n<i>「就把这奶糖团子给符太卜。吃了甜食，总该消气罢！」</i>",
+          "basic_desc": "智识命途专属的光锥，光锥技能仅对该命途生效。",
+          "skill_name": "风雨将至",
+          "skill_desc": "进入战斗后，根据装备者的能量上限，提高装备者造成的伤害：每点能量提高#1[f2]%，最多计入160点。",
+          "rarity": "CombatPowerLightconeRarity4",
+          "images": {
+            "icon": "/assets/lightcones/21034_icon.webp",
+            "art": "/assets/lightcones/21034_art.webp",
+            "medium_icon": "/assets/lightcones/21034_mediumIcon.webp"
+          }
+        },
+        "promotion": 5,
+        "relics": [
+          {
+            "id": 61091,
+            "name": "乐队的偏光墨镜",
+            "desc": "主唱之一的詹尼斯所戴的经典款墨镜，镀铬镜片反射着蓝色的光芒。",
+            "type": 1,
+            "type_name": "HEAD",
+            "max_level": 15,
+            "level": 15,
+            "main_affix_id": 1,
+            "main_affix_name": "生命值",
+            "main_affix_tag": "HPDelta",
+            "main_affix_value": 705.6000000101048,
+            "sub_affix_id": [
+              {
+                "id": 2,
+                "name": "攻击力",
+                "tag": "AttackDelta",
+                "value": 35.986915002111346,
+                "cnt": 2,
+                "step": 1,
+                "weight": 0.5
+              },
+              {
+                "id": 5,
+                "name": "攻击力",
+                "tag": "AttackAddedRatio",
+                "value": 0.10368000157177448,
+                "cnt": 3,
+                "step": 0,
+                "weight": 0.75
+              },
+              {
+                "id": 6,
+                "name": "防御力",
+                "tag": "DefenceAddedRatio",
+                "value": 0.09719999972730875,
+                "cnt": 2,
+                "step": 2,
+                "weight": 0.0
+              },
+              {
+                "id": 8,
+                "name": "暴击率",
+                "tag": "CriticalChanceBase",
+                "value": 0.03240000084042549,
+                "cnt": 1,
+                "step": 2,
+                "weight": 1.0
+              }
+            ],
+            "relic_set_id": 109,
+            "image": "/assets/relic/61091.webp",
+            "score": 16.112903225806452
+          },
+          {
+            "id": 61092,
+            "name": "乐队的巡演手绳",
+            "desc": "贝斯手席德的手绳，由巡演时的丝带手环编织而成，上面写着几句歌词。",
+            "type": 2,
+            "type_name": "HAND",
+            "max_level": 15,
+            "level": 15,
+            "main_affix_id": 1,
+            "main_affix_name": "攻击力",
+            "main_affix_tag": "AttackDelta",
+            "main_affix_value": 352.8000000116881,
+            "sub_affix_id": [
+              {
+                "id": 5,
+                "name": "攻击力",
+                "tag": "AttackAddedRatio",
+                "value": 0.11232000170275569,
+                "cnt": 3,
+                "step": 2,
+                "weight": 0.75
+              },
+              {
+                "id": 6,
+                "name": "防御力",
+                "tag": "DefenceAddedRatio",
+                "value": 0.09719999972730875,
+                "cnt": 2,
+                "step": 2,
+                "weight": 0.0
+              },
+              {
+                "id": 9,
+                "name": "暴击伤害",
+                "tag": "CriticalDamageBase",
+                "value": 0.06480000168085098,
+                "cnt": 1,
+                "step": 2,
+                "weight": 1.0
+              },
+              {
+                "id": 11,
+                "name": "效果抵抗",
+                "tag": "StatusResistanceBase",
+                "value": 0.07344000111334026,
+                "cnt": 2,
+                "step": 1,
+                "weight": 0.0
+              }
+            ],
+            "relic_set_id": 109,
+            "image": "/assets/relic/61092.webp",
+            "score": 12.890322580645163
+          },
+          {
+            "id": 61023,
+            "name": "快枪手的猎风披肩",
+            "desc": "看上去是有民族风格的编制披肩，内衬部分编织了能够防弹的纤维。",
+            "type": 3,
+            "type_name": "BODY",
+            "max_level": 15,
+            "level": 15,
+            "main_affix_id": 4,
+            "main_affix_name": "暴击率",
+            "main_affix_tag": "CriticalChanceBase",
+            "main_affix_value": 0.3239999986253679,
+            "sub_affix_id": [
+              {
+                "id": 1,
+                "name": "生命值",
+                "tag": "HPDelta",
+                "value": 182.05146000813693,
+                "cnt": 5,
+                "step": 3,
+                "weight": 0.0
+              },
+              {
+                "id": 7,
+                "name": "速度",
+                "tag": "SpeedDelta",
+                "value": 4.6000000005587935,
+                "cnt": 2,
+                "step": 2,
+                "weight": 0.75
+              },
+              {
+                "id": 9,
+                "name": "暴击伤害",
+                "tag": "CriticalDamageBase",
+                "value": 0.06480000168085098,
+                "cnt": 1,
+                "step": 2,
+                "weight": 1.0
+              },
+              {
+                "id": 10,
+                "name": "效果命中",
+                "tag": "StatusProbabilityBase",
+                "value": 0.043200000654906034,
+                "cnt": 1,
+                "step": 2,
+                "weight": 0.0
+              }
+            ],
+            "relic_set_id": 102,
+            "image": "/assets/relic/61023.webp",
+            "score": 17.85
+          },
+          {
+            "id": 61024,
+            "name": "快枪手的铆钉马靴",
+            "desc": "马靴有着V形剪裁的开口，看上去随性松弛，穿起来非常舒适。",
+            "type": 4,
+            "type_name": "FOOT",
+            "max_level": 15,
+            "level": 15,
+            "main_affix_id": 4,
+            "main_affix_name": "速度",
+            "main_affix_tag": "SpeedDelta",
+            "main_affix_value": 25.03200000547804,
+            "sub_affix_id": [
+              {
+                "id": 2,
+                "name": "攻击力",
+                "tag": "AttackDelta",
+                "value": 42.337546004448086,
+                "cnt": 2,
+                "step": 4,
+                "weight": 0.5
+              },
+              {
+                "id": 4,
+                "name": "生命值",
+                "tag": "HPAddedRatio",
+                "value": 0.1166400017682463,
+                "cnt": 3,
+                "step": 3,
+                "weight": 0.0
+              },
+              {
+                "id": 6,
+                "name": "防御力",
+                "tag": "DefenceAddedRatio",
+                "value": 0.14579999959096313,
+                "cnt": 3,
+                "step": 3,
+                "weight": 0.0
+              },
+              {
+                "id": 8,
+                "name": "暴击率",
+                "tag": "CriticalChanceBase",
+                "value": 0.02592000039294362,
+                "cnt": 1,
+                "step": 0,
+                "weight": 1.0
+              }
+            ],
+            "relic_set_id": 102,
+            "image": "/assets/relic/61024.webp",
+            "score": 13.45
+          },
+          {
+            "id": 63065,
+            "name": "萨尔索图的移动城市",
+            "desc": "位面封装的是萨尔索图星上仅剩的移动城市之一：风滚草。这座城市从未停下，才勉强做到不被黑夜或者极昼吞没。",
+            "type": 5,
+            "type_name": "NECK",
+            "max_level": 15,
+            "level": 15,
+            "main_affix_id": 7,
+            "main_affix_name": "雷属性伤害提高",
+            "main_affix_tag": "ThunderAddedRatio",
+            "main_affix_value": 0.38880301429890096,
+            "sub_affix_id": [
+              {
+                "id": 1,
+                "name": "生命值",
+                "tag": "HPDelta",
+                "value": 38.103794001974165,
+                "cnt": 1,
+                "step": 1,
+                "weight": 0.0
+              },
+              {
+                "id": 2,
+                "name": "攻击力",
+                "tag": "AttackDelta",
+                "value": 61.389442005893216,
+                "cnt": 3,
+                "step": 5,
+                "weight": 0.5
+              },
+              {
+                "id": 3,
+                "name": "防御力",
+                "tag": "DefenceDelta",
+                "value": 33.87003800133243,
+                "cnt": 2,
+                "step": 0,
+                "weight": 0.0
+              },
+              {
+                "id": 9,
+                "name": "暴击伤害",
+                "tag": "CriticalDamageBase",
+                "value": 0.11016000201925635,
+                "cnt": 2,
+                "step": 1,
+                "weight": 1.0
+              }
+            ],
+            "relic_set_id": 306,
+            "image": "/assets/relic/63065.webp",
+            "score": 18.85
+          },
+          {
+            "id": 63066,
+            "name": "萨尔索图的晨昏界线",
+            "desc": "停止自转的萨尔索图星的日夜周期漫长无比，人们只有追逐着「晨昏交界线」不断迁徙，才能勉强维持住仅剩的生存空间。",
+            "type": 6,
+            "type_name": "OBJECT",
+            "max_level": 15,
+            "level": 15,
+            "main_affix_id": 4,
+            "main_affix_name": "攻击力",
+            "main_affix_tag": "AttackAddedRatio",
+            "main_affix_value": 0.4320000072475523,
+            "sub_affix_id": [
+              {
+                "id": 1,
+                "name": "生命值",
+                "tag": "HPDelta",
+                "value": 76.20758800394833,
+                "cnt": 2,
+                "step": 2,
+                "weight": 0.0
+              },
+              {
+                "id": 7,
+                "name": "速度",
+                "tag": "SpeedDelta",
+                "value": 7.200000001117587,
+                "cnt": 3,
+                "step": 4,
+                "weight": 0.75
+              },
+              {
+                "id": 10,
+                "name": "效果命中",
+                "tag": "StatusProbabilityBase",
+                "value": 0.03888000058941543,
+                "cnt": 1,
+                "step": 1,
+                "weight": 0.0
+              },
+              {
+                "id": 11,
+                "name": "效果抵抗",
+                "tag": "StatusResistanceBase",
+                "value": 0.07344000111334026,
+                "cnt": 2,
+                "step": 1,
+                "weight": 0.0
+              }
+            ],
+            "relic_set_id": 306,
+            "image": "/assets/relic/63066.webp",
+            "score": 13.8
+          }
+        ],
+        "behaviorList": [
+          {
+            "id": 1204001,
+            "level": 2,
+            "name": "石火流光",
+            "type": "普攻",
+            "tag": "单攻",
+            "desc": "对指定敌方单体造成等同于景元60%攻击力的雷属性伤害。",
+            "icon": "/assets/hash/cf45b4f511a518e640d28d3e44f8fbe4ce7a1865a043180f6d42466a4a502307.webp"
+          },
+          {
+            "id": 1204002,
+            "level": 4,
+            "name": "紫霄震曜",
+            "type": "战技",
+            "tag": "群攻",
+            "desc": "对敌方全体造成等同于景元65%攻击力的雷属性伤害，同时增加2段【神君】下回合的攻击段数。",
+            "icon": "/assets/hash/878027dd8917c05d7c3092f8dacbf9e65e2435b1f3ed15da6db14d0d6c5ddb1f.webp"
+          },
+          {
+            "id": 1204003,
+            "level": 4,
+            "name": "吾身光明",
+            "type": "终结技",
+            "tag": "群攻",
+            "desc": "对敌方全体造成等同于景元144%攻击力的雷属性伤害。同时增加3段【神君】下回合的攻击段数。",
+            "icon": "/assets/hash/f0e53a3bb9b2aaacaea5d582ca0b6da93b6b216fee588cfd76b6c4a47f852bf4.webp"
+          },
+          {
+            "id": 1204004,
+            "level": 6,
+            "name": "斩勘神形",
+            "type": "天赋",
+            "tag": "弹射",
+            "desc": "战斗开始时召唤【神君】。【神君】初始拥有60点速度以及3段攻击段数，行动时发动追加攻击，每段攻击对随机敌方单体造成等同于景元攻击力50%的雷属性伤害，同时对其相邻目标造成等同于主目标25%的雷属性伤害。\\n【神君】最多累计10段攻击段数且每增加1段攻击段数，速度提高10点，行动结束后速度和攻击段数恢复至初始状态。\\n当景元陷入无法战斗状态时【神君】消失。\\n当景元受到控制类负面状态影响时【神君】也无法行动。",
+            "icon": "/assets/hash/c43b75a1946b584ba59978f9c822b5f9a64f30e4af5e480db25a3a9d7d23f91f.webp"
+          },
+          {
+            "id": 1204007,
+            "level": 1,
+            "name": "摄召威灵",
+            "type": "秘技",
+            "tag": "强化",
+            "desc": "使用秘技后，下一次战斗开始时【神君】第1回合的攻击段数增加3段。",
+            "icon": "/assets/hash/48a7b2d40c6d609aaaed7a6ea7c8de8c1336dc6f89ca865412b23f8ae78a9a52.webp"
+          },
+          {
+            "id": 1204101,
+            "level": 1
+          },
+          {
+            "id": 1204102,
+            "level": 1
+          },
+          {
+            "id": 1204201,
+            "level": 1,
+            "name": "攻击力增加0.0400000000372529"
+          },
+          {
+            "id": 1204202,
+            "level": 1,
+            "name": "暴击率增加0.02699999953620136"
+          },
+          {
+            "id": 1204203,
+            "level": 1,
+            "name": "攻击力增加0.0400000000372529"
+          },
+          {
+            "id": 1204205,
+            "level": 1,
+            "name": "攻击力增加0.060000000055879354"
+          },
+          {
+            "id": 1204206,
+            "level": 1,
+            "name": "暴击率增加0.0400000000372529"
+          }
+        ],
+        "properties": {
+          "attackBase": 1067.808,
+          "attackDelta": 1462.0835785182676,
+          "defenseBase": 709.95,
+          "defenseDelta": 275.3950273237424,
+          "hpBase": 1749.3600000000001,
+          "hpDelta": 1206.0081955174637,
+          "criticalChance": 0.5793199995066971,
+          "criticalDamage": 0.7397600053809583,
+          "speedBase": 99.0,
+          "speedAdd": 36.83200000715442,
+          "aggro": 75.0,
+          "statusResistance": 0.14688000222668052,
+          "statusProbability": 0.08208000124432147,
+          "breakDamageAdded": 0.0,
+          "healRatio": 0.0,
+          "physicalAdded": 0.0,
+          "fireAdded": 0.0,
+          "iceAdded": 0.0,
+          "thunderAdded": 0.4888030143920332,
+          "windAdded": 0.0,
+          "quantumAdded": 0.0,
+          "imaginaryAdded": 0.0,
+          "spRatio": 0.0
+        },
+        "images": {
+          "icon": "/assets/avatar/jingyuan_icon.webp",
+          "bg": "/assets/avatar/jingyuan_bg.webp",
+          "fig": "/assets/avatar/jingyuan_fig.webp",
+          "fg": "/assets/avatar/jingyuan_fg.webp",
+          "art": "/assets/avatar/jingyuan_art.webp",
+          "mini_icon": "/assets/avatar/jingyuan_miniIcon.webp",
+          "splash_icon": "/assets/avatar/jingyuan_splashIcon.webp"
+        },
+        "ranks": [
+          {
+            "image": "/assets/hash/bb6407724936626f9c132a0e5dda78484394b04c9b2838fa6ad4b566891ed4dc.webp",
+            "name": "星流霆击碎昆冈",
+            "desc": "【神君】施放攻击时，对指定敌方单体的相邻目标造成的伤害倍率额外提高，提高数值等同于对主目标伤害倍率的25%。",
+            "activate": false
+          },
+          {
+            "image": "/assets/hash/b9a2c1830b33c850a0b13d96876b37c84ae1b3e3d0ed4fcdca58ccb50a3b39de.webp",
+            "name": "戎戈动地开天阵",
+            "desc": "【神君】行动后，景元的普攻、战技、终结技造成的伤害提高20%，持续2回合。",
+            "activate": false
+          },
+          {
+            "image": "/assets/hash/d3c8ca2ac8364808ddbb02267368dd0b14c088752959ee472a47a3d10bb08a47.webp",
+            "name": "移锋惊电冲霄汉",
+            "desc": "终结技等级+2，最多不超过15级；普攻等级+1，最多不超过10级。",
+            "activate": false
+          },
+          {
+            "image": "/assets/hash/9e4f61dc0bc37de21a8dde311a72f2f7fe051d87659bfc8c4a56706ec59fe916.webp",
+            "name": "刃卷横云落玉沙",
+            "desc": "【神君】每段攻击后，景元恢复2点能量。",
+            "activate": false
+          },
+          {
+            "image": "/assets/hash/f128a9bf8234df151e97c35a4758d67738a953e842fd28bbb1ec0914f7fe9dc4.webp",
+            "name": "百战弃躯轻死生",
+            "desc": "战技等级+2，最多不超过15级；天赋等级+2，最多不超过15级。",
+            "activate": false
+          },
+          {
+            "image": "/assets/hash/66f2603a1407e17533a20ec7c3cfba5360a27107b17556e08beaac13117365e8.webp",
+            "name": "威灵有应破敌雠",
+            "desc": "【神君】每段攻击后会使指定敌方目标额外陷入易伤状态。易伤状态下的敌方目标受到的伤害提高12%，持续至【神君】本次攻击结束，该效果最多叠加3层。",
+            "activate": false
+          }
+        ],
+        "relic_score": 92.95322580645161
+      }
+    ],
+    "adventureInfo": {
+      "achievementCount": 243,
+      "avatarCount": 17,
+      "lightConeCount": 49,
+      "passAreaProgress": 6,
+      "challengeData": {
+        "schedule_max_level": null,
+        "preMazeGroupIndex": null,
+        "DBIFMIPHOFN": 0
+      }
+    }
+  },
+  "version": "build20230606",
+  "repository": "https://github.com/hewang1an/StarRail-plugin",
+  "source": "ikechan8370"
+}
