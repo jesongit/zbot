@@ -5,6 +5,7 @@ from pathlib import Path
 from pymysql import cursors
 
 config = yaml.safe_load(Path('config.yaml').open(encoding='utf8'))
+role_name = yaml.safe_load(Path('role_name.yaml').open(encoding='utf8'))
 
 
 def appid():
@@ -32,3 +33,9 @@ def mysql_config():
         'database': config['mysql_database'],
         'cursorclass': cursors.DictCursor
     }
+
+
+def get_role_id(name):
+    if name in role_name:
+        return role_name[name]
+    return 0

@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from .mysql import *
-from botpy import logger
 
 tab = 'user'
 

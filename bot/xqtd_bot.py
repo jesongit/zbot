@@ -55,6 +55,20 @@ async def xhelp(api: BotAPI, message: DirectMessage, params: str = None):
     return True
 
 
+@Commands("xupdate")
+async def xupdate(api: BotAPI, message: DirectMessage, params: str = None):
+    _, info = update_role_info(message.author.id)
+    await message.reply(content=f'<@{message.author.id}>{info}')
+    return True
+
+
+@Commands("xrole")
+async def xrole(api: BotAPI, message: DirectMessage, params: str = None):
+    _, info = get_role_info(message.author.id)
+    await message.reply(content=f'<@{message.author.id}>{info}')
+    return True
+
+
 def xqtd_gacha_info(user_id: str):
     flag, xqtd_uid = user.get_uid(user_id, 'xqtd_uid')
     if not flag:
@@ -66,7 +80,7 @@ def xqtd_gacha_info(user_id: str):
 
 
 def get_handles():
-    return [bind_user, gacha_record, load_xqtd_url, xhelp]
+    return [bind_user, gacha_record, load_xqtd_url, xhelp, xupdate, xrole]
 
 
 if __name__ == '__main__':

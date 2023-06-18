@@ -1,11 +1,10 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 from queue import Queue
-from botpy import logger
 from pymysql import connect
 
 from .make_sql import *
-from utils.config import mysql_config
+from utils import *
 
 
 def new_connect():
@@ -15,7 +14,6 @@ def new_connect():
 def init_pool(cnt=3):
     queue = Queue()
     for i in range(cnt):
-        logger.info(f'init mysql: {i}')
         queue.put(new_connect())
     return queue
 
@@ -39,7 +37,6 @@ def query(sql, args=None):
         return res
     except Exception as e:
         cursor.close()
-        logger.exception(f'sql: {sql} args: {args}{e}')
         return None
     finally:
         pool.put(conn)
@@ -55,7 +52,6 @@ def execute(sql, args=None):
         return True
     except Exception as e:
         cursor.close()
-        logger.exception(f'sql: {sql} args: {args}{e}')
         return False
     finally:
         pool.put(conn)
@@ -72,7 +68,6 @@ def executemany(sql, args=None):
         return True
     except Exception as e:
         cursor.close()
-        logger.exception(f'sql: {sql} args: {args}{e}')
         return False
     finally:
         pool.put(conn)

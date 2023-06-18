@@ -1,5 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
+import json
+
 from .mysql import *
 tab = 'gacha_xqtd'
 
@@ -68,6 +70,15 @@ def is_limited(item_id):
 
 def check_gacha_id(end_id):
     return isinstance(select(tab, where=[('id', end_id)]), list)
+
+
+def insert_role_info(uid: int, role_info: dict):
+    role_id = role_info['avatarId']
+    return insert(tab, uid=uid, role_id=role_id, info=json.dumps(role_info), extra=' replace')
+
+
+def select_role_info(uid: int, role_id):
+    return select(tab, where=[('uid', uid), ('role_id', role_id)])
 
 
 if __name__ == '__main__':

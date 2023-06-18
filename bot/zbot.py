@@ -3,6 +3,7 @@
 from api import *
 
 import botpy
+from botpy import logger
 from botpy.message import Message, DirectMessage
 
 

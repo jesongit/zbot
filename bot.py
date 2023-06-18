@@ -1,5 +1,4 @@
 from bot import *
-from utils import *
 
 user_cd_dict = {}
 handle_list = {
