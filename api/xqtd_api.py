@@ -222,14 +222,14 @@ def gen_role_info(data: dict):
         skills.append(skill if index % 2 == 0 else skill + '\n')
     skills = ''.join(skills)
 
-    relics = '\n'.join([f"{relic['name']}[+{relic['level']}]  "
-                        f"{relic['main_affix_name']}: "
-                        f"{parse_affix_value(relic['main_affix_value'])}"
-                        f"  评分: {int(relic['score'])}\n"
-                        f"{gen_sub_affix(relic['sub_affix_id'])}" for relic in data['relics']])
+    relics = ''.join([f"{relic['name']}[+{relic['level']}]  "
+                      f"{relic['main_affix_name']}: "
+                      f"{parse_affix_value(relic['main_affix_value'])}"
+                      f"  评分: {int(relic['score'])}\n"
+                      f"{gen_sub_affix(relic['sub_affix_id'])}" for relic in data['relics']])
 
     return f'\n{role_name}: Lv{role_level} {role_rank}\n' \
-           f'{skills}\n{attr_info}\n' \
+           f'{skills}\n{attr_info}' \
            f'\n{equip_name}: Lv{equip_level} 叠影{equip_rank}阶 遗器总评分: {role_score}\n{relics}'
 
 
@@ -260,14 +260,25 @@ def gen_attr_info(attr):
     damage_add = parse_affix_value(
         attr['physicalAdded'] + attr['fireAdded'] + attr['iceAdded'] +
         attr['thunderAdded'] + attr['windAdded'] + attr['quantumAdded'] + attr['imaginaryAdded'])
-
-    return f'攻击力: {total_atk}({base_atk}+{delta_atk})\n' \
-           f'防御力: {total_def}({base_def}+{delta_def})\n' \
-           f'生命值: {total_hp}({base_hp}+{delta_hp})\n' \
-           f'速度: {total_speed}({base_speed}+{add_speed})\t' \
-           f'效果抵抗: {status_resistance}\t效果命中: {status_probability}\n' \
-           f'暴击率: {critical_chance}\t\t暴击伤害: {critical_damage}\t击破特攻: {break_damage_add}\n' \
-           f'治疗加成: {heal_ratio}\t\t能量回复: {sp_ratio}\t属性加成: {damage_add}'
+    attr_list = [
+        f'攻击力: {total_atk}({base_atk}+{delta_atk})',
+        f'防御力: {total_def}({base_def}+{delta_def})',
+        f'生命值: {total_hp}({base_hp}+{delta_hp})',
+        f'速度: {total_speed}({base_speed}+{add_speed})',
+        f'效果抵抗: {status_resistance}',
+        f'效果命中: {status_probability}',
+        f'暴击率: {critical_chance}',
+        f'暴击伤害: {critical_damage}',
+        f'击破特攻: {break_damage_add}',
+        f'治疗加成: {heal_ratio}',
+        f'能量回复: {sp_ratio}',
+        f'属性加成: {damage_add}',
+    ]
+    attr_info = []
+    for index, attr_str in enumerate(attr_list):
+        attr_str = format_str(attr_str)
+        attr_info.append(attr_str if index % 2 == 0 else attr_str + '\n')
+    return ''.join(attr_info)
 
 
 def gen_sub_affix(affix_list):
@@ -276,7 +287,7 @@ def gen_sub_affix(affix_list):
         cnt = '' if affix['cnt'] == 1 else f"[{affix['cnt'] - 1}]"
         s = format_str(f"{cnt}{affix['name']}: {parse_affix_value(affix['value'])}")
         res.append(s if index % 2 == 0 else s + '\n')
-    return ''.join(res)
+    return ''.join(res) + ('' if len(affix_list) % 2 == 0 else '\n')
 
 
 def parse_affix_value(value):
