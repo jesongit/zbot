@@ -1,11 +1,12 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 import yaml
+from botpy import logger
 from pathlib import Path
 from pymysql import cursors
 
 config = yaml.safe_load(Path('config.yaml').open(encoding='utf8'))
-role_name = yaml.safe_load(Path('role_name.yaml').open(encoding='utf8'))
+name2id = yaml.safe_load(Path('name.yaml').open(encoding='utf8'))
 
 
 def appid():
@@ -31,11 +32,13 @@ def mysql_config():
         'user': config['mysql_user'],
         'password': config['mysql_password'],
         'database': config['mysql_database'],
-        'cursorclass': cursors.DictCursor
+
+        'charset': 'utf8mb4',
+        'cursorclass': cursors.DictCursor,
     }
 
 
-def get_role_id(name):
-    if name in role_name:
-        return role_name[name]
+def name_to_id(name):
+    if name in name2id:
+        return name2id[name]
     return 0

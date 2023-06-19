@@ -1,11 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
-import logging
 import re
-from logging.handlers import RotatingFileHandler
-from pathlib import Path
-
 from PIL import Image
+from botpy import logger
 
 LOG_MAX_BYTE = 10485760
 LOG_FILE_CNT = 10
@@ -30,18 +27,19 @@ def decode_powershell_str(s: str):
     return s.encode().decode('unicode_escape')
 
 
-def logconfig(name: str = 'test'):
-    Path('log').mkdir(parents=True, exist_ok=True)
-    format = "%(asctime)-15s %(threadName)s[%(module)-6s:%(funcName)-10s %(lineno)-3d] %(levelname)s: %(message)s"
+def fill_tab(s: str):
+    logger.debug(f"len: {len(s)} {len(s.encode('gbk'))}{s}")
+    s = s.encode('gbk')
+    if len(s) < 8:
+        return '\t'
+    if len(s) < 16:
+        return ''
+    return ''
 
-    info_handler = RotatingFileHandler(
-        f'log/info_{name}.log', encoding='utf8', maxBytes=LOG_MAX_BYTE, backupCount=LOG_FILE_CNT)
-    info_handler.setFormatter(logging.Formatter(format))
-    info_handler.setLevel(logging.INFO)
 
-    error_handler = RotatingFileHandler(
-        f'log/error_{name}.log', encoding='utf8', maxBytes=LOG_MAX_BYTE, backupCount=LOG_FILE_CNT)
-    error_handler.setFormatter(logging.Formatter(format))
-    error_handler.setLevel(logging.ERROR)
-
-    logging.basicConfig(level=logging.DEBUG, handlers=[info_handler, error_handler])
+def format_str(s: str):
+    if len(s) < 6:
+        return f'{s}\t\t\t'
+    if len(s) < 12:
+        return f'{s}\t\t'
+    return f"{s}\t"

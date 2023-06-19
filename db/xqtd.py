@@ -3,7 +3,8 @@
 import json
 
 from .mysql import *
-tab = 'gacha_xqtd'
+GACHA_TAB = 'gacha_xqtd'
+ROLE_INFO = 'role_info'
 
 '''
 {'uid': '105846671',
@@ -29,13 +30,13 @@ gacha_type_list = [
 
 # 限时角色列表
 limited_list = [
-    1102,   # 希儿
-    1204,   # 景元
-    1006,   # 银狼
+    name_to_id('希儿'),
+    name_to_id('景元'),
+    name_to_id('银狼'),
 
-    23001,  # 与夜色中
-    23010,  # 拂晓之前
-    23007,  # 雨一直下
+    name_to_id('于夜色中'),
+    name_to_id('拂晓之前'),
+    name_to_id('雨一直下'),
 ]
 
 
@@ -57,11 +58,11 @@ def insert_gacha(dict_list):
             if v.isdecimal():
                 data[k] = int(v)
         data_list.append(data)
-    batch_insert(tab, data_list, extra=' ignore')
+    batch_insert(GACHA_TAB, data_list, extra=' ignore')
 
 
 def get_gacha_by_uid(uid):
-    return select(tab, where=[('uid', uid)])
+    return select(GACHA_TAB, where=[('uid', uid)])
 
 
 def is_limited(item_id):
@@ -69,16 +70,18 @@ def is_limited(item_id):
 
 
 def check_gacha_id(end_id):
-    return isinstance(select(tab, where=[('id', end_id)]), list)
+    return isinstance(select(GACHA_TAB, where=[('id', end_id)]), list)
 
 
 def insert_role_info(uid: int, role_info: dict):
     role_id = role_info['avatarId']
-    return insert(tab, uid=uid, role_id=role_id, info=json.dumps(role_info), extra=' replace')
+    return insert_or_update(ROLE_INFO, uid=uid, role_id=role_id, info=str(role_info))
+    # data = [{'uid': uid, 'role_id': role_id, 'info': json.dumps(role_info)}]
+    # return batch_insert('role_info', data)
 
 
 def select_role_info(uid: int, role_id):
-    return select(tab, where=[('uid', uid), ('role_id', role_id)])
+    return select(ROLE_INFO, where=[('uid', uid), ('role_id', role_id)])
 
 
 if __name__ == '__main__':

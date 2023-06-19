@@ -13,6 +13,8 @@ TEXT_HELP = f'''
 /xhelp: 查看所有指令
 /xurl: 使用抽卡链接导入抽卡记录 导入后自动绑定uid
 /xgacha: 查看抽卡记录
+/xupdate: 更新展柜角色
+/xrole: 查看已更新角色
 抽卡链接导入方法进入子频道”贴吧“查看
 '''
 
@@ -64,7 +66,7 @@ async def xupdate(api: BotAPI, message: DirectMessage, params: str = None):
 
 @Commands("xrole")
 async def xrole(api: BotAPI, message: DirectMessage, params: str = None):
-    _, info = get_role_info(message.author.id)
+    _, info = get_role_info(message.author.id, params)
     await message.reply(content=f'<@{message.author.id}>{info}')
     return True
 

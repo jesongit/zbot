@@ -173,14 +173,15 @@ def gen_bd_str(gacha_type, record, total):
 
 def update_role_info(user_id):
     flag, xqtd_uid = get_uid(user_id, 'xqtd_uid')
-    if flag:
+    if not flag:
         return False, r'请先绑定uid'
     req = requests.get(f'https://sr.ikechan8370.com/v1/info/{xqtd_uid}?lang=cn')
     if req.status_code != 200:
         return False, r'无法获取角色信息'
     try:
         data = req.json()['playerDetailInfo']
-        role_list = data['displayAvatars'].append(data['assistAvatar'])
+        role_list = data['displayAvatars']
+        role_list.append(data['assistAvatar'])
         res = [role['name'] for role in role_list if insert_role_info(xqtd_uid, role)]
         return res != [], '无可更新角色' if res == [] else f'更新 {res} 成功. 使用"/xrole 角色名查看"'
     except Exception as e:
@@ -190,39 +191,46 @@ def update_role_info(user_id):
 
 def get_role_info(user_id, role_name):
     flag, xqtd_uid = get_uid(user_id, 'xqtd_uid')
-    if flag:
+    if not flag:
         return False, r'请先绑定uid'
 
-    role_id = get_role_id(role_name)
-    if role_id:
+    role_id = name_to_id(role_name)
+    if not role_id:
         return False, '检查角色名是否正确'
 
-    res, = select_role_info(xqtd_uid, role_id)
+    res = select_role_info(xqtd_uid, role_id)
     if not res:
         return False, '未查询到角色信息, 使用 "/xupdate" 更新展柜角色信息'
 
-    return True, gen_role_info(json.loads(res))
+    return True, gen_role_info(eval(res[0]['info']))
 
 
 def gen_role_info(data: dict):
     role_name = data['name']
+    role_rank = '' if data['rank'] == 0 else f"{data['rank']} 命"
     role_level = data['level']
-    role_score = data['relic_score']
+    role_score = int(data['relic_score'])
     equip_name = data['equipment']['name']
     equip_level = data['equipment']['level']
     equip_rank = data['equipment']['rank']
 
     attr_info = gen_attr_info(data['properties'])
 
-    skills = ' | '.join([f"{skill['name']}: Lv{skill['level']}" for skill in data['behaviorList']])
+    skills = [f"[{skill['type']}]{skill['name']}: Lv{skill['level']}"
+              for skill in data['behaviorList'] if 'type' in skill]
+    skills = '\t'.join(skills[:3]) + '\n' + '\t'.join(skills[3:])
 
-    relics = '\n'.join([f"{relic['name']}[{relic['score']}]->" \
-                        f"{relic['main_affix_name']}: {parse_affix_value(relic['main_affix_value'])}" \
-                        f"{gen_sub_affix(data['sub_affix_id'])}" for relic in data['relics']])
+    # for relic in data['relics']:
+    #     logger.debug(f"{'sub_affix_id' in relic} {relic}")
+    relics = '\n'.join([f"{relic['name']}[+{relic['level']}]  "
+                        f"{relic['main_affix_name']}: "
+                        f"{parse_affix_value(relic['main_affix_value'])}"
+                        f"  评分: {int(relic['score'])}\n"
+                        f"{gen_sub_affix(relic['sub_affix_id'])}" for relic in data['relics']])
 
-    return f'{role_name}: Lv{role_level} ' \
+    return f'\n{role_name}: Lv{role_level} {role_rank}命\n' \
            f'{skills}\n{attr_info}\n' \
-           f'{equip_name}: Lv{equip_level} 叠影{equip_rank}阶 遗器总评分: {role_score}\n{relics}'
+           f'\n{equip_name}: Lv{equip_level} 叠影{equip_rank}阶 遗器总评分: {role_score}\n{relics}'
 
 
 def gen_attr_info(attr):
@@ -253,25 +261,27 @@ def gen_attr_info(attr):
         attr['physicalAdded'] + attr['fireAdded'] + attr['iceAdded'] +
         attr['thunderAdded'] + attr['windAdded'] + attr['quantumAdded'] + attr['imaginaryAdded'])
 
-    return f'攻击力: ({base_atk}+{delta_atk}){total_atk}\t' \
-           f'防御力: ({base_def}+{delta_def}){total_def}\n' \
-           f'生命值: ({base_hp}+{delta_hp}){total_hp}\t' \
-           f'速度: ({base_speed}+{add_speed}){total_speed}\n' \
-           f'效果抵抗: {status_resistance}\t效果命中: {status_probability}\t' \
-           f'暴击率: {critical_chance}\t暴击伤害: {critical_damage}\t击破特攻: {break_damage_add}\n' \
-           f'治疗加成: {heal_ratio}\t能量回复: {sp_ratio}\t属性加成: {damage_add}'
+    return f'攻击力: {total_atk}({base_atk}+{delta_atk})\n' \
+           f'防御力: {total_def}({base_def}+{delta_def})\n' \
+           f'生命值: {total_hp}({base_hp}+{delta_hp})\n' \
+           f'速度: {total_speed}({base_speed}+{add_speed})\t' \
+           f'效果抵抗: {status_resistance}\t\t效果命中: {status_probability}\n' \
+           f'暴击率: {critical_chance}\t\t暴击伤害: {critical_damage}\t\t击破特攻: {break_damage_add}\n' \
+           f'治疗加成: {heal_ratio}\t\t能量回复: {sp_ratio}\t\t属性加成: {damage_add}'
 
 
 def gen_sub_affix(affix_list):
     res = []
     for affix in affix_list:
         cnt = '' if affix['cnt'] == 1 else f"[{affix['cnt'] - 1}]"
-        res.append(f" | {affix['name']}{cnt}: {parse_affix_value(affix['value'])}")
-    return ''.join(res)
+        res.append(format_str(f"{cnt}{affix['name']}: {parse_affix_value(affix['value'])}"))
+    return f"{res[0]}{res[1]}\n{res[2]}{res[3]}\n"
 
 
 def parse_affix_value(value):
-    return int(value) if value > 1 else f'{int(value)}%'
+    if value > 2:
+        return int(value)
+    return f'{round(value * 100, 1)}%'
 
 
 if __name__ == '__main__':

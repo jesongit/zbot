@@ -3,8 +3,8 @@
 from queue import Queue
 from pymysql import connect
 
-from .make_sql import *
 from utils import *
+from .make_sql import *
 
 
 def new_connect():
@@ -14,6 +14,7 @@ def new_connect():
 def init_pool(cnt=3):
     queue = Queue()
     for i in range(cnt):
+        logger.info(f'init mysql: {i}')
         queue.put(new_connect())
     return queue
 
@@ -37,6 +38,7 @@ def query(sql, args=None):
         return res
     except Exception as e:
         cursor.close()
+        logger.exception(f'sql: {sql} args: {args}{e}')
         return None
     finally:
         pool.put(conn)
@@ -52,6 +54,7 @@ def execute(sql, args=None):
         return True
     except Exception as e:
         cursor.close()
+        logger.exception(f'sql: {sql} args: {args}{e}')
         return False
     finally:
         pool.put(conn)
@@ -68,6 +71,7 @@ def executemany(sql, args=None):
         return True
     except Exception as e:
         cursor.close()
+        logger.exception(f'sql: {sql} args: {args}{e}')
         return False
     finally:
         pool.put(conn)
@@ -75,7 +79,7 @@ def executemany(sql, args=None):
 
 def get_extra(kwargs):
     if 'extra' in kwargs:
-        extra = kwargs['extra']
+        extra = ' ' + kwargs['extra']
         del kwargs['extra']
         return extra, kwargs
     return '', kwargs
@@ -89,6 +93,12 @@ def insert(tab, **kwargs):
     extra, kwargs = get_extra(kwargs)
     fields, values = parse_field_value(kwargs)
     return execute(f'insert{extra} into {tab} ({fields}) values ({values});')
+
+
+def insert_or_update(tab, **kwargs):
+    fields, values = parse_field_value(kwargs)
+    update = parse_update_set(kwargs)
+    return execute(f'insert into {tab} ({fields}) values ({values}) on duplicate key update {update};')
 
 
 def batch_insert(tab, values, **kwargs):
