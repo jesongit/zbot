@@ -38,6 +38,7 @@ def query(sql, args=None):
         return res
     except Exception as e:
         cursor.close()
+        conn.ping(True)
         logger.exception(f'sql: {sql} args: {args}{e}')
         return None
     finally:
@@ -54,6 +55,7 @@ def execute(sql, args=None):
         return True
     except Exception as e:
         cursor.close()
+        conn.ping(True)
         logger.exception(f'sql: {sql} args: {args}{e}')
         return False
     finally:
@@ -71,6 +73,7 @@ def executemany(sql, args=None):
         return True
     except Exception as e:
         cursor.close()
+        conn.ping(True)
         logger.exception(f'sql: {sql} args: {args}{e}')
         return False
     finally:

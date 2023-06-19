@@ -272,10 +272,11 @@ def gen_attr_info(attr):
 
 def gen_sub_affix(affix_list):
     res = []
-    for affix in affix_list:
+    for index, affix in enumerate(affix_list):
         cnt = '' if affix['cnt'] == 1 else f"[{affix['cnt'] - 1}]"
-        res.append(format_str(f"{cnt}{affix['name']}: {parse_affix_value(affix['value'])}"))
-    return f"{res[0]}{res[1]}\n{res[2]}{res[3]}\n"
+        s = format_str(f"{cnt}{affix['name']}: {parse_affix_value(affix['value'])}")
+        res.append(s if index % 2 == 0 else s + '\n')
+    return ''.join(res)
 
 
 def parse_affix_value(value):
