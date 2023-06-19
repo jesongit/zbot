@@ -216,12 +216,12 @@ def gen_role_info(data: dict):
 
     attr_info = gen_attr_info(data['properties'])
 
-    skills = [f"[{skill['type']}]{skill['name']}: Lv{skill['level']}"
-              for skill in data['behaviorList'] if 'type' in skill]
-    skills = '\t'.join(skills[:3]) + '\n' + '\t'.join(skills[3:])
+    skills = []
+    for index, skill in enumerate([skill for skill in data['behaviorList'] if 'type' in skill][:4]):
+        skill = format_str(f"[{skill['type']}]{skill['name']}: Lv{skill['level']}")
+        skills.append(skill if index % 2 == 0 else skill + '\n')
+    skills = ''.join(skills)
 
-    # for relic in data['relics']:
-    #     logger.debug(f"{'sub_affix_id' in relic} {relic}")
     relics = '\n'.join([f"{relic['name']}[+{relic['level']}]  "
                         f"{relic['main_affix_name']}: "
                         f"{parse_affix_value(relic['main_affix_value'])}"
@@ -265,9 +265,9 @@ def gen_attr_info(attr):
            f'防御力: {total_def}({base_def}+{delta_def})\n' \
            f'生命值: {total_hp}({base_hp}+{delta_hp})\n' \
            f'速度: {total_speed}({base_speed}+{add_speed})\t' \
-           f'效果抵抗: {status_resistance}\t\t效果命中: {status_probability}\n' \
-           f'暴击率: {critical_chance}\t\t暴击伤害: {critical_damage}\t\t击破特攻: {break_damage_add}\n' \
-           f'治疗加成: {heal_ratio}\t\t能量回复: {sp_ratio}\t\t属性加成: {damage_add}'
+           f'效果抵抗: {status_resistance}\t效果命中: {status_probability}\n' \
+           f'暴击率: {critical_chance}\t\t暴击伤害: {critical_damage}\t击破特攻: {break_damage_add}\n' \
+           f'治疗加成: {heal_ratio}\t\t能量回复: {sp_ratio}\t属性加成: {damage_add}'
 
 
 def gen_sub_affix(affix_list):

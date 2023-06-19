@@ -38,8 +38,13 @@ def fill_tab(s: str):
 
 
 def format_str(s: str):
-    if len(s) < 6:
-        return f'{s}\t\t\t'
+    logger.debug(f'len: {len(s)} {len(s.encode("gbk"))} {s}')
+    if len(s) < 4:
+        return f'{s}\t\t\t\t\t'
+    if len(s) < 8:
+        return f'{s}\t\t\t\t'
     if len(s) < 12:
+        return f'{s}\t\t\t'
+    if len(s) < 16:
         return f'{s}\t\t'
     return f"{s}\t"
