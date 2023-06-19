@@ -228,7 +228,7 @@ def gen_role_info(data: dict):
                         f"  评分: {int(relic['score'])}\n"
                         f"{gen_sub_affix(relic['sub_affix_id'])}" for relic in data['relics']])
 
-    return f'\n{role_name}: Lv{role_level} {role_rank}命\n' \
+    return f'\n{role_name}: Lv{role_level} {role_rank}\n' \
            f'{skills}\n{attr_info}\n' \
            f'\n{equip_name}: Lv{equip_level} 叠影{equip_rank}阶 遗器总评分: {role_score}\n{relics}'
 
