@@ -32,13 +32,13 @@ def query(sql, args=None):
     conn = pool.get()
     cursor = conn.cursor()
     try:
+        conn.ping()
         cursor.execute(sql, args=args)
         res = cursor.fetchall()
         cursor.close()
         return res
     except Exception as e:
         cursor.close()
-        conn.ping(True)
         logger.exception(f'sql: {sql} args: {args}{e}')
         return None
     finally:
@@ -49,6 +49,7 @@ def execute(sql, args=None):
     conn = pool.get()
     cursor = conn.cursor()
     try:
+        conn.ping()
         cursor.execute(sql, args)
         cursor.close()
         conn.commit()
@@ -67,6 +68,7 @@ def executemany(sql, args=None):
     cursor = conn.cursor()
     try:
         assert isinstance(args, list) and len(args) > 0
+        conn.ping()
         cursor.executemany(sql, args)
         cursor.close()
         conn.commit()
