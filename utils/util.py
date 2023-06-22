@@ -38,12 +38,12 @@ def fill_tab(s: str):
 
 
 def format_str(s: str):
-    logger.debug(f'len: {len(s)} {len(s.encode("utf8"))} {s}')
-    length = len(s.encode('gbk'))
-    tab_cnt = int((32 - length) // 4 + 0.5)
-    # if length % 4 == 0:
+    # logger.debug(f'len: {len(s)} {len(s.encode("gbk"))} {s}')
+    # length, max_len, interval = len(s.encode('gbk')), 32, 4
+    # tab_cnt = (max_len - length) // interval + 1
+    # if length % interval == 0:
     #     tab_cnt -= 1
-    return s + '\t' * tab_cnt
+    return s + '\t'
     # if len(l) <= 4:
     #     return f'{s}\t\t\t\t\t'
     # if len(l) <= 8:

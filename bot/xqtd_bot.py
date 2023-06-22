@@ -16,11 +16,6 @@ TEXT_HELP = f'''
 /xupdate: 更新展柜角色
 /xrole: 查看已更新角色
 抽卡链接导入方法进入子频道”贴吧“查看
-|\t|
-|卧槽卧槽卧槽卧槽|
-|aaaaaaaaaaaaa|
-|0000000000000|
-|\t|
 '''
 
 IMG_URL_HELP = 'res/img/xqtd_help_url.png'

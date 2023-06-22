@@ -216,21 +216,23 @@ def gen_role_info(data: dict):
 
     attr_info = gen_attr_info(data['properties'])
 
-    skills = []
-    for index, skill in enumerate([skill for skill in data['behaviorList'] if 'type' in skill][:4]):
-        skill = format_str(f"[{skill['type']}]{skill['name']}: Lv{skill['level']}")
-        skills.append(skill if index % 2 == 0 else skill + '\n')
-    skills = ''.join(skills)
+    # skills = []
+    # for index, skill in enumerate([skill for skill in data['behaviorList'] if 'type' in skill][:4]):
+    #     skill = format_str(f"[{skill['type']}]{skill['name']}: Lv{skill['level']}")
+    #     skills.append(skill if index % 2 == 0 else skill + '\n')
+    # skills = ''.join(skills)
+    skills = '\n'.join([f"[{skill['type']}]{skill['name']}: Lv{skill['level']}" for skill in data['behaviorList'] if 'type' in skill][:4])
 
-    relics = ''.join([f"{relic['name']}[+{relic['level']}]  "
+    logger.debug(data['relics'])
+    relics = '\n'.join([f"{relic['name']}[+{relic['level']}]\n"
                       f"{relic['main_affix_name']}: "
                       f"{parse_affix_value(relic['main_affix_value'])}"
                       f"  评分: {int(relic['score'])}\n"
                       f"{gen_sub_affix(relic['sub_affix_id'])}" for relic in data['relics']])
 
     return f'\n{role_name}: Lv{role_level} {role_rank}\n' \
-           f'{skills}\n{attr_info}' \
-           f'\n{equip_name}: Lv{equip_level} 叠影{equip_rank}阶 遗器总评分: {role_score}\n{relics}'
+           f'{skills}\n\n{attr_info}\n{equip_name}: Lv{equip_level}\n' \
+           f'叠影{equip_rank}阶 遗器总评分: {role_score}\n\n{relics}'
 
 
 def gen_attr_info(attr):
@@ -260,11 +262,13 @@ def gen_attr_info(attr):
     damage_add = parse_affix_value(
         attr['physicalAdded'] + attr['fireAdded'] + attr['iceAdded'] +
         attr['thunderAdded'] + attr['windAdded'] + attr['quantumAdded'] + attr['imaginaryAdded'])
+    attr_info = [
+        f'攻击力: {total_atk}({base_atk}+{delta_atk})\n'
+        f'防御力: {total_def}({base_def}+{delta_def})\n',
+        f'生命值: {total_hp}({base_hp}+{delta_hp})\n',
+        f'速度: {total_speed}({base_speed}+{add_speed})\n'
+    ]
     attr_list = [
-        f'攻击力: {total_atk}({base_atk}+{delta_atk})',
-        f'防御力: {total_def}({base_def}+{delta_def})',
-        f'生命值: {total_hp}({base_hp}+{delta_hp})',
-        f'速度: {total_speed}({base_speed}+{add_speed})',
         f'效果抵抗: {status_resistance}',
         f'效果命中: {status_probability}',
         f'暴击率: {critical_chance}',
@@ -274,7 +278,6 @@ def gen_attr_info(attr):
         f'能量回复: {sp_ratio}',
         f'属性加成: {damage_add}',
     ]
-    attr_info = []
     for index, attr_str in enumerate(attr_list):
         attr_str = format_str(attr_str)
         attr_info.append(attr_str if index % 2 == 0 else attr_str + '\n')
